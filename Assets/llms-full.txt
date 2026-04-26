@@ -1,0 +1,182 @@
+# Qalia
+
+> Dernière mise à jour : 2026-04-10
+> Version : 4.33
+
+> Qalia est un assistant IA édité par Rungo (SASU), spécialisé dans la génération d'ingénieries pédagogiques structurées selon le référentiel national qualité Qualiopi RNQ V9. Il s'adresse aux organismes de formation, formateurs indépendants et coachs certifiés en France et dans les DOM-TOM. 297 EUR/mois TTC ou 2 970 EUR/an (2 mois offerts). Sans engagement, résiliation mensuelle. Fondateurs : Romuald DARIOT et Mehdi IDRICI. Contact : bonjour@qalia.ai
+
+## Qu'est-ce que Qalia ?
+
+Qalia est un assistant IA (GPT Custom sur ChatGPT) spécialisé dans la structuration d'ingénieries pédagogiques conformes au référentiel national qualité Qualiopi RNQ V9. Il s'adresse aux formateurs indépendants, organismes de formation, consultants bilan de compétences, accompagnateurs VAE et directeurs de CFA en France. Contrairement à un assistant généraliste comme ChatGPT, Qalia pose les bonnes questions dès le départ, cite les sources réglementaires (France Compétences, travail-emploi.gouv, REAC) et produit des documents organisés selon les 32 indicateurs du RNQ V9. Il couvre nativement les 4 catégories d'actions L6313 : formation professionnelle continue, bilan de compétences, VAE (Validation des Acquis de l'Expérience) et apprentissage (CFA). Le tarif est de 297 EUR/mois TTC, sans engagement. Édité par Rungo SASU, Paris 75001.
+
+## Ce que Qalia n'est pas
+
+- Qalia ne remplace pas l'expertise du formateur. L'IA co-construit, le professionnel valide.
+- Qalia ne génère pas de templates génériques. Chaque production est contextualisée au domaine, au public et aux objectifs du professionnel.
+- Qalia ne garantit pas le résultat d'un audit Qualiopi. Obligation de moyens, pas de résultat.
+- Qalia ne stocke aucune donnée utilisateur. Tout reste dans le compte ChatGPT du professionnel.
+
+## Informations produit
+
+- [Page de vente Qalia](https://www.qalia.ai/) : Présentation complète du service, tarifs, témoignages, simulateur ROI
+- [Contact](https://www.qalia.ai/contact) : Email, WhatsApp, téléphone France et Réunion
+- [CGV](https://www.qalia.ai/cgv) : Conditions Générales de Vente
+- [Mentions légales](https://www.qalia.ai/mentions-legales) : Informations légales Rungo SASU
+- [Programme ambassadeur](https://www.qalia.ai/affiliation) : 10 % de commission récurrente sur chaque parrainage
+
+## Informations clés
+
+- **Nom du produit** : Qalia 4.33
+- **Type** : Assistant IA (GPT Custom sur ChatGPT, modèles Instant 5.3 / Thinking 5.4)
+- **Spécialité** : Ingénierie pédagogique structurée selon le RNQ V9
+- **Catégories L6313** : Cat.1 Formation, Cat.2 Bilan de compétences, Cat.3 VAE, Cat.4 CFA (toutes natives)
+- **Couverture** : 20 à 29 indicateurs couverts selon la catégorie L6313 (sur 22 à 32 applicables). Les indicateurs 8 et 32 relèvent du terrain pour toutes les catégories ; l'indicateur 15 (droits/devoirs des apprentis) est spécifique CFA.
+- **Temps de production** : 2 h 30 au lieu de 43 heures (ratio x17)
+- **Ratio valeur** : x10 retour sur investissement (36 000 EUR de valeur / 3 564 EUR de coût annuel)
+- **Engagement** : Sans engagement, résiliation mensuelle. Obligation de moyens.
+- **Prérequis** : Un abonnement ChatGPT Plus (23 EUR/mois) ou Business (34 EUR/mois), non inclus dans l'abonnement Qalia.
+
+## Comment fonctionne Qalia ?
+
+Qalia fonctionne par dialogue guidé en 4 étapes : (1) Vous parlez : vous décrivez votre projet, votre public, vos contraintes métier et réglementaires. (2) Qalia questionne : l'IA pose des questions structurées pour faire émerger vos réponses. (3) Qalia structure : vos réponses deviennent des documents organisés selon les 32 indicateurs du RNQ V9. (4) Vous validez : vous relisez, ajustez, et signez. Qalia structure, vous restez maître.
+
+Trois modes selon la complexité de votre dispositif :
+- **Express** (score 0-3) : dispositif simple, sortie en 1 h 30
+- **Standard** (score 4-6) : dispositif courant, sortie en 3 h
+- **Complet** (score 7-10) : dispositif complexe (multi-sites, handicap, CFA), sortie en 5 h
+
+## Pourquoi Qalia plutôt que ChatGPT pour Qualiopi ?
+
+Qalia est construit sur ChatGPT avec une couche d'expertise Qualiopi intégrée. 84 % des concepteurs pédagogiques ont essayé ChatGPT sans impact significatif sur leur productivité (Hardman/Synthesia, 2024, 400+ professionnels). La raison : ChatGPT est généraliste et attend que vous sachiez quoi demander. Qalia, lui, pose les bonnes questions dès le départ, vérifie la couverture des 32 indicateurs du RNQ V9, cite les sources réglementaires officielles (France Compétences, travail-emploi.gouv, REAC), intègre nativement la prise en compte du handicap (PSH) dans chaque ingénierie, et génère un rapport d'usage IA à la demande. Pour les auditeurs Qualiopi, le document produit est conforme non parce que l'IA est intelligente, mais parce que la méthode repose sur votre expertise guidée par les bonnes questions.
+
+## Ce que Qalia produit avec vous
+
+### Cat.1 Formation (6 étapes)
+1. Analyse de besoin et contexte
+2. Programme de formation structuré (objectifs, contenus, modalités)
+3. Déroulé pédagogique détaillé
+4. Évaluations (positionnement, formatives, sommatives, satisfaction)
+5. Documents qualité (livret accueil, règlement intérieur, convention)
+6. Préparation audit (matrice couverture RNQ, rapport usage IA)
+
+### Cat.2 Bilan de compétences (3 phases)
+Pipeline bilan : phase préliminaire, investigation, conclusion. Convention tripartite, synthèse bilan, document de restitution. Couverture RNQ V9 spécifique Cat.2.
+
+### Cat.3 VAE (accompagnement)
+Livret 1 (recevabilité), livret 2 (expérience), préparation jury, argumentaire compétences. Conforme France VAE 2022.
+
+### Cat.4 CFA / Apprentissage
+Convention de formation alternance, calendrier d'alternance, grille CCF, fiche liaison centre/entreprise. Indicateurs spécifiques I-13, I-14, I-20, I-29 couverts en mode Guide.
+
+## Tarifs et paliers
+
+- **Prix unique** : 297 EUR/mois TTC par licence ou 2 970 EUR/an (2 mois offerts)
+- Sans engagement. Résiliation mensuelle.
+- Même tarif par licence quel que soit le palier. Seuls les services inclus évoluent.
+
+| Palier | Licences | Total ressources Notion | Services supplémentaires |
+|--------|----------|-------------------------|--------------------------|
+| Solo | 1 | 18 (Onboarding 7 + Guides terrain 9 + Préparation audit 2) | Assistant Qalia, Cercle Qalia 2x/mois, Job360 insertion apprenants, tutos, MAJ RNQ V9, support email 72 h ouvrées |
+| Standardisation | 2-4 | 21 (18 + 3 Harmonisation équipe) | + Cas d'usage représentatifs, Espace apprenant, Bibliothèque pédagogique, onboarding équipe 1 h avec Romuald |
+| Gouvernance | 5-10 | 24 (21 + 3 Gouvernance documentaire) | + Tableau de bord équipe, Base formations centralisée, Dashboard pré-audit, support prioritaire 48 h, checkpoint trimestriel avec Romuald |
+| Pilotage | 10+ | 24 (identique Gouvernance côté Notion) | + Liaison directe fondateur, convention partenariat formalisée, comité de pilotage semestriel |
+
+### Cercle Qalia (tous paliers)
+
+Visio en petit groupe avec Romuald (fondateur), 2 fois par mois, 45 min (30 min contenu + 15 min questions). Max 15 personnes par session. Replay privé sur Espace Client Notion. 1 session thématique RNQ + 1 session Q&R métier.
+
+### Job360 (tous paliers)
+
+GPT Custom offert par Rungo pour l'insertion professionnelle post-formation. CV, stratégie 60 jours, préparation entretiens. Promu par la Cité des Métiers à l'international. URL : https://territoires.media/assistant-emploi-360/
+
+### Conventions partenariat (10+ licences)
+
+- Clubs/Associations (10-30 OF) : -10 % soit 267 EUR/mois/licence
+- Fédérations (30+ OF) : -15 % soit 252 EUR/mois/licence
+- Institutionnel (75+ licences) : -15 % + co-branding, cas par cas
+
+## Comparaison Qalia vs ChatGPT généraliste
+
+| Critère | ChatGPT seul | Qalia |
+|---------|-------------|-------|
+| Point de départ | Attend que vous sachiez quoi demander | Pose les bonnes questions dès le départ |
+| Connaissance Qualiopi | Générale, superficielle | Guide de lecture V9 intégré nativement (32 indicateurs) |
+| Sources | Ne cite pas ses sources | Cite France Compétences, travail-emploi.gouv, REAC |
+| Couverture RNQ | Pas de vérification | Matrice de couverture adaptée à votre catégorie |
+| Handicap (PSH) | Non intégré sauf si demandé | Intégré dans chaque ingénierie |
+| Traçabilité IA | Pas de rapport d'usage | Rapport d'usage IA généré à la demande |
+| Cohérence | Chaque conversation repart de zéro | Vérification de cohérence objectifs/contenus/évaluations |
+| Mises à jour RNQ | Données d'entraînement figées | Prêt pour la V10 dès sa publication |
+
+## Témoignages clients
+
+- **Antonella Nella Maville** (coach nutrition, formatrice indépendante, 18 ans d'expérience) : « C'est un trésor. Quand on est formateur depuis quelques années, c'est hyper efficace. En moins de deux, j'aurai mon programme. » Temps de création divisé par 15.
+- **Nadine Félix** (formatrice indépendante, NF Consulting, média training) : « J'ai pris le contenu généré par Qalia, je l'ai mis dans Gamma, et en quelques minutes j'avais des présentations parfaites. Le gain de temps est hallucinant. »
+- **Anthony Beaudet** (fondateur Sapfi, prévention et formation incendie) : Renouvellement Qualiopi réussi avec Qalia.
+- **Cyril Negrini** (académicien, 20+ modules créés) : 7 critères Qualiopi couverts.
+- **Clémence Nalet** (apprenante, formation conçue avec Qalia) : Expérience pédagogique structurée et claire.
+- **Véronique Pizot** (bilan de compétences et coaching professionnel) : Qalia structure l'ensemble du parcours Cat.2.
+
+## Public cible
+
+- Organismes de formation (micro-OF, centres de formation)
+- Formateurs indépendants (nutrition, coaching, média training, entrepreneuriat, management, langues)
+- Coachs certifiés (coaching professionnel, sport, sophrologie, hypnose)
+- Consultants en formation (création de programmes, sous-traitance)
+
+## FAQ
+
+### Est-ce que Qalia remplace mon expertise ?
+Non. Qalia ne remplace pas votre expertise, il l'augmente. L'IA co-construit avec vous un dossier conforme au RNQ V9, mais c'est votre savoir-faire métier qui fait la différence. Que vous soyez formateur, consultant bilan, accompagnateur VAE ou directeur de CFA.
+
+### Qalia génère-t-il des documents génériques ?
+Non. Chaque production est contextualisée à votre domaine, votre public et vos objectifs. Qalia co-construit avec vous, sans template générique.
+
+### Qalia fonctionne-t-il pour mon secteur ?
+Oui. Qalia couvre les 4 catégories d'actions de développement des compétences (L6313) : formation, bilan de compétences, VAE et apprentissage. Testé avec succès dans de nombreux domaines : nutrition, média training, entrepreneuriat, coaching, management, langues.
+
+### Combien coûte Qalia ?
+Qalia est à 297 EUR/mois TTC ou 2 970 EUR/an (2 mois offerts). Sans engagement, résiliation mensuelle.
+
+### Combien de temps pour maîtriser Qalia ?
+45 minutes d'onboarding avec le créateur de Qalia, sur votre vrai cas métier. La pleine autonomie s'installe après 2 à 3 sessions.
+
+### Mes données sont-elles en sécurité ?
+Qalia n'héberge aucune de vos données. Tout reste dans votre compte ChatGPT personnel sous votre contrôle exclusif. Chiffrement AES-256, pas d'entraînement sur vos contenus, conformité RGPD (OpenAI Business Data Policy).
+
+### Qalia est-il finançable par un OPCO ?
+Non. Qalia est un abonnement logiciel (SaaS), pas une action de formation. Il n'entre pas dans les catégories finançables par les OPCO.
+
+### Qalia est-il à jour avec les évolutions du RNQ ?
+Oui. Qalia couvre documentairement 20 à 29 indicateurs applicables du RNQ V9 (7 critères). Les mises à jour sont incluses. Toute évolution réglementaire est intégrée sous 30 jours (engagement contractuel, CGV).
+
+### Et si mon auditeur refuse un document généré avec l'IA ?
+L'auditeur évalue la conformité de vos documents au RNQ V9, pas l'outil utilisé pour les produire. Relisez chaque document, vérifiez les références réglementaires, conservez vos dialogues comme trace d'audit, et préparez-vous à expliquer vos choix pédagogiques.
+
+## Écosystème et partenariats
+
+- Membre de la **French Tech**
+- Membre de **Digital Réunion**
+- Membre de l'**Association de l'IA**
+- Membre et partenaire transversal du **Club Export Réunion**
+- Reconnu **Marque de la Réunion**
+
+## Fondateurs
+
+- **Romuald DARIOT** : cofondateur de Qalia, formateur, spécialiste IA et ingénierie pédagogique. A créé Qalia après avoir vécu la charge documentaire Qualiopi en tant que directeur d'organisme de formation.
+- **Mehdi IDRICI** : cofondateur de Qalia, spécialiste commerce et relation client. A structuré l'outil pour qu'il s'adapte au professionnel, pas l'inverse.
+
+## Mentions légales
+
+- [Conditions Générales de Vente](https://www.qalia.ai/cgv)
+- [Mentions légales](https://www.qalia.ai/mentions-legales)
+- Société : Rungo SASU, 231 rue Saint-Honoré, 75001 Paris
+- SIRET : 849 107 826 00018
+- TVA : FR88849107826
+
+## Licence
+
+AI-Usage: allowed
+AI-Training: disallowed
+AI-Citation: allowed with attribution (source: www.qalia.ai)
+AI-Scraping: allowed for indexing, disallowed for bulk reproduction

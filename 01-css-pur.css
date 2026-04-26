@@ -1176,8 +1176,10 @@
                   padding 0.35s cubic-bezier(0.4, 0, 0.2, 1),
                   box-shadow 0.4s var(--enso);
     }
+    /* Correction 2026-04-27 : ouverture via :hover (PC) ou classe .is-expanded (mobile/clavier).
+       :focus-within retire car la card restait ouverte apres clic interne sur PC. */
     .expandable-card:hover,
-    .expandable-card:focus-within {
+    .expandable-card.is-expanded {
       /* Restaure le padding mode-card 62/38 a l'ouverture */
       padding: var(--space-xl) var(--space-lg) var(--space-lg);
       max-height: 400px;
@@ -1197,7 +1199,7 @@
       flex-shrink: 0;
     }
     .expandable-card:hover .expandable-chevron,
-    .expandable-card:focus-within .expandable-chevron {
+    .expandable-card.is-expanded .expandable-chevron {
       transform: rotate(180deg);
       color: var(--bleu-canard);
     }
@@ -1209,7 +1211,7 @@
       margin-top: var(--space-sm);
     }
     .expandable-card:hover .expandable-body,
-    .expandable-card:focus-within .expandable-body {
+    .expandable-card.is-expanded .expandable-body {
       opacity: 1;
       transform: translateY(0);
     }
@@ -5536,6 +5538,7 @@
 
     .sim-roi-legend {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: var(--space-md);
       margin-top: var(--space-sm);
@@ -5547,6 +5550,72 @@
       gap: var(--space-2xs);
       font-size: var(--fs-small);
       color: var(--gris);
+      max-width: 100%;
+      flex: 0 1 auto;
+    }
+
+    /* Correction responsive 2026-04-27 : legende ROI en 2 colonnes sur mobile pour eviter le debordement */
+    @media (max-width: 600px) {
+      .sim-roi-legend {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-xs) var(--space-sm);
+        padding: 0 var(--space-sm);
+      }
+      .sim-roi-legend-item {
+        font-size: var(--fs-caption);
+        line-height: 1.35;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 380px) {
+      .sim-roi-legend {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Correction responsive 2026-04-27 : forcer les grilles 2 colonnes inline en 1 colonne sur mobile.
+       Concerne : cap-card (Ce que Qalia genere), Cadre legal + Indicateurs prioritaires, etc.
+       L'attribut [style*="1fr 1fr"] cible les grids inline avec grid-template-columns:1fr 1fr. */
+    @media (max-width: 600px) {
+      .cap-card > div[style*="1fr 1fr"],
+      .cat-panel-placeholder > div[style*="1fr 1fr"],
+      .cat-panel > div[style*="1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+        gap: var(--space-sm) !important;
+      }
+      .cap-card .cap-badge {
+        font-size: var(--fs-caption);
+      }
+    }
+
+    /* Correction responsive 2026-04-27 : cards Praticien solo / Organisme & equipe (steps-grid)
+       Force min-height auto en mobile pour eviter le verrouillage JS sur ecran etroit. */
+    @media (max-width: 600px) {
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+      }
+      .step-card {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    /* Correction responsive 2026-04-27 : labels profils dans les cartes du simulateur (sim-task)
+       Wrap au lieu de tronquer pour eviter le debordement a droite. */
+    @media (max-width: 600px) {
+      .sim-task-label,
+      .sim-task-profile,
+      .sim-task .profile-tag,
+      .sim-task [class*="profile"] {
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        flex-shrink: 1;
+        min-width: 0;
+        max-width: 100%;
+      }
     }
 
     .sim-roi-dot {

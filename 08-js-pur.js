@@ -32,17 +32,10 @@
       observer.observe(hero);
     })();
 
-    // ---- F3 : CTA flottant desktop (visible apres le hero, masque en mobile via CSS) ----
+    // ---- F3 retire 2026-04-27 : floatingCta supprime sur demande utilisateur ----
     (function() {
-      var floatingCta = document.getElementById('floatingCta');
-      var hero = document.getElementById('hero');
-      if (!floatingCta || !hero) return;
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-          floatingCta.style.display = entry.isIntersecting ? 'none' : 'block';
-        });
-      }, { threshold: 0 });
-      obs.observe(hero);
+      // No-op : le bouton flottant central a ete retire. Le sticky CTA mobile (#stickyCta) couvre seul ce besoin.
+      return;
     })();
 
     // ---- Intersection Observer for fade-in animations ----

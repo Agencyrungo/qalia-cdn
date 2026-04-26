@@ -1,0 +1,140 @@
+{
+  "_meta": {
+    "description": "Prompts de generation d'images pour le tunnel Qalia V8",
+    "date": "2026-04-11",
+    "photos_reference": {
+      "romuald_dariot": {
+        "description": "Homme, chemise sombre/marine, fond noir, tient une tasse noire, montre au poignet gauche (bracelet rouge), regard direct camera, sourire subtil, cheveux courts",
+        "fichier_source": "image.jpeg (5474x3649)",
+        "usage": "Fondateur et CEO, hero, histoire, CTA final"
+      },
+      "mehdi_idrici": {
+        "description": "Homme, lunettes rectangulaires bleu-gris, chemise blanche col ouvert, fond bleu-canard (#1B7E94 environ), sourire franc, cheveux poivre et sel coiffes en arriere",
+        "fichier_source": "photo avec lunettes (1080x1080)",
+        "usage": "Co-fondateur, section equipe si necessaire"
+      }
+    },
+    "charte_graphique": {
+      "couleur_primaire": "#1B7E94",
+      "couleur_secondaire": "#932951",
+      "noir": "#1A1A1A",
+      "blanc": "#FFFFFF",
+      "gris": "#5A6A70",
+      "fond_clair": "#F7F9FA",
+      "font_display": "DM Serif Display",
+      "font_main": "Plus Jakarta Sans"
+    },
+    "recommandation_outil": {
+      "priorite_1": "ChatGPT (DALL-E) : upload les 2 photos reference, puis generer les variantes. Supporte le character reference natif depuis 2025.",
+      "priorite_2": "Flux 2 Pro (via API) : meilleur modele pour la coherence des visages en 2026.",
+      "priorite_3": "Gemini Imagen (via gemini-generate-image MCP) : bon pour les compositions sans visage (OG image, favicon).",
+      "a_eviter": "Midjourney : moins de controle sur la coherence faciale pour des portraits specifiques."
+    }
+  },
+
+  "images": [
+    {
+      "id": "hero-romuald",
+      "fichier_sortie": "romuald-dariot.webp",
+      "dimensions": "400x400 (affiche 200x200, retina 2x)",
+      "format": "WebP, qualite 85",
+      "usage_html": "Hero section, .hero-photo img, circular (border-radius: 50%)",
+      "methode_recommandee": "RECADRAGE DIRECT de image.jpeg. Pas de generation IA.",
+      "instructions_recadrage": "Cadrer sur le visage + epaules (portrait buste serre). Centre du cadrage sur les yeux. Le cercle CSS (border-radius 50%) coupera les bords, donc laisser de la marge. Fond noir visible = OK, coherent avec le design.",
+      "prompt_si_generation_ia": "Professional headshot portrait of a man in his late 30s, short dark hair, wearing a dark navy button-down shirt, looking directly at camera with a subtle confident smile, black background, soft studio lighting from the left, shallow depth of field, corporate portrait style. Square crop, centered on face and upper shoulders.",
+      "ne_pas_faire": "Ne PAS changer le fond noir. Ne PAS ajouter de filtre. Ne PAS modifier les traits du visage."
+    },
+    {
+      "id": "og-image",
+      "fichier_sortie": "og-image-qalia.png",
+      "dimensions": "1200x630",
+      "format": "PNG",
+      "usage_html": "meta og:image, twitter:image, JSON-LD screenshot",
+      "methode_recommandee": "Composition graphique (pas de generation de visage IA)",
+      "prompt_chatgpt": "Create a professional Open Graph preview image for a SaaS product called 'Qalia'. Layout: left side shows the product name 'Qalia' in large DM Serif Display font, white text. Below it: 'Assistant IA Qualiopi RNQ V9' in Plus Jakarta Sans, smaller. Right side: abstract geometric pattern with teal (#1B7E94) and burgundy (#932951) gradients on a dark background (#1A1A1A). Include a subtle 4-pointed star icon in teal. Dimensions: 1200x630px. Clean, premium SaaS aesthetic. No photos, no faces.",
+      "prompt_gemini": "Professional SaaS Open Graph image, 1200x630px. Dark background #1A1A1A. Left side: large text 'Qalia' in serif font, white. Subtitle 'Assistant IA Qualiopi RNQ V9' in sans-serif, teal #1B7E94. Right side: abstract geometric shapes, teal and burgundy gradients. Minimal, premium tech aesthetic.",
+      "ne_pas_faire": "Ne PAS inclure de visage humain (les OG images avec visages generees par IA sont detectables). Ne PAS utiliser de stock photo."
+    },
+    {
+      "id": "logo-qalia",
+      "fichier_sortie": "logo-qalia.png",
+      "dimensions": "400x120 (affiche 200x60, retina 2x)",
+      "format": "PNG fond transparent",
+      "usage_html": "JSON-LD Organization logo",
+      "methode_recommandee": "Export depuis le texte CSS existant. Le logo est du texte pur (Plus Jakarta Sans 700, #1B7E94, 'Qalia' + TM en exposant).",
+      "instructions": "Ouvrir page-unique.html dans un navigateur. Zoomer sur le logo nav 'Qalia TM'. Screenshot haute resolution. Detourer sur fond transparent. Exporter en PNG 400x120.",
+      "prompt_si_generation": "Text logo: the word 'Qalia' in Plus Jakarta Sans Bold font, color teal #1B7E94, with a tiny 'TM' superscript in lighter weight. Transparent background. Clean, modern, no icon, text only. 400x120px.",
+      "ne_pas_faire": "Ne PAS generer un logo graphique complexe. C'est un logotype textuel simple."
+    },
+    {
+      "id": "favicon-32",
+      "fichier_sortie": "favicon-32x32.png",
+      "dimensions": "32x32",
+      "format": "PNG",
+      "usage_html": "link rel=icon 32x32",
+      "methode_recommandee": "Lettre 'Q' stylisee en Plus Jakarta Sans Bold, blanc sur fond #1B7E94, coins arrondis 6px.",
+      "prompt": "Favicon icon, 32x32 pixels. Single letter 'Q' in Plus Jakarta Sans Bold, white text on teal #1B7E94 background. Rounded corners (6px radius). Centered. Clean, minimal.",
+      "variante": "Utiliser l'etoile 4 branches du footer Qalia comme icone alternative."
+    },
+    {
+      "id": "favicon-16",
+      "fichier_sortie": "favicon-16x16.png",
+      "dimensions": "16x16",
+      "format": "PNG",
+      "usage_html": "link rel=icon 16x16",
+      "methode_recommandee": "Meme design que favicon-32, reduit a 16px. A cette taille la lettre Q est a peine lisible, l'etoile 4 branches serait plus efficace.",
+      "prompt": "Tiny favicon, 16x16 pixels. Four-pointed star icon in white on teal #1B7E94 square background. Rounded corners. Pixel-perfect, must read at 16px."
+    },
+    {
+      "id": "apple-touch-icon",
+      "fichier_sortie": "apple-touch-icon.png",
+      "dimensions": "180x180",
+      "format": "PNG",
+      "usage_html": "link rel=apple-touch-icon",
+      "methode_recommandee": "Meme design que favicon-32 mais en 180px. Lettre Q + fond teal + coins arrondis iOS (iOS arrondit lui-meme).",
+      "prompt": "Apple touch icon, 180x180 pixels. Letter 'Q' in Plus Jakarta Sans Bold, white, centered on teal #1B7E94 background. No rounded corners (iOS adds them). Clean, flat design."
+    },
+    {
+      "id": "hero-histoire-romuald",
+      "fichier_sortie": "romuald-dariot-histoire.webp",
+      "dimensions": "600x400",
+      "format": "WebP, qualite 80",
+      "usage_html": "Section Histoire (L.7440-7493), optionnel, ajout futur",
+      "methode_recommandee": "RECADRAGE DIRECT de image.jpeg. Cadrage plus large (buste + mains + tasse). Le fond noir est coherent avec le ton introspectif de la section Histoire.",
+      "prompt_si_generation_ia": "Professional portrait of a man in his late 30s, short dark hair, dark navy shirt, sitting and holding a black coffee cup with both hands, black background, warm studio lighting, contemplative and approachable expression. Horizontal crop 3:2.",
+      "ne_pas_faire": "Ne PAS generer si le recadrage direct est possible. La photo reelle est toujours superieure."
+    },
+    {
+      "id": "qalia-screenshot",
+      "fichier_sortie": "Qalia-screenshot.png",
+      "dimensions": "1200x800",
+      "format": "PNG",
+      "usage_html": "JSON-LD SoftwareApplication screenshot (actuellement pointe vers og-image)",
+      "methode_recommandee": "Capture d'ecran reelle de l'interface ChatGPT avec Qalia actif. Montrer un dialogue en cours (question posee par Qalia + reponse utilisateur + document genere).",
+      "instructions": "Ouvrir ChatGPT. Lancer une session Qalia sur un cas reel. Capturer l'ecran avec le dialogue visible. Flouter les donnees sensibles si necessaire.",
+      "ne_pas_faire": "Ne PAS generer un faux screenshot avec l'IA. Les personas ont identifie l'absence de visuel produit comme un irritant. Un vrai screenshot est plus credible."
+    }
+  ],
+
+  "workflow_chatgpt": {
+    "etape_1": "Uploader les 2 photos reference (Romuald image.jpeg + Mehdi lunettes) dans ChatGPT",
+    "etape_2": "Dire : 'Ces 2 personnes sont les fondateurs de Qalia. Romuald = chemise sombre fond noir. Mehdi = lunettes, chemise blanche fond bleu. Je vais te demander de generer des images pour notre site web en utilisant ces references.'",
+    "etape_3": "Generer hero-romuald : 'Recadre la photo de Romuald (chemise sombre) en portrait carre 400x400, centre sur le visage et les epaules. Garde le fond noir. WebP qualite 85.'",
+    "etape_4": "Generer og-image : utiliser le prompt og-image ci-dessus (SANS visage)",
+    "etape_5": "Generer favicon : utiliser le prompt favicon ci-dessus",
+    "etape_6": "Pour le screenshot Qalia : faire une vraie capture d'ecran, pas de generation IA"
+  },
+
+  "workflow_recadrage_simple": {
+    "description": "Si ChatGPT ne produit pas un resultat satisfaisant pour les portraits, utiliser un recadrage manuel.",
+    "outil_gratuit": "https://squoosh.app (Google, recadrage + conversion WebP)",
+    "etapes": [
+      "Ouvrir image.jpeg dans Squoosh",
+      "Recadrer en carre centre sur le visage (laisser marge pour le border-radius 50%)",
+      "Redimensionner a 400x400",
+      "Exporter en WebP qualite 85",
+      "Renommer romuald-dariot.webp",
+      "Placer dans Assets/"
+    ]
+  }
+}

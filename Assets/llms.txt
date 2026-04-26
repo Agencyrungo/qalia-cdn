@@ -1,0 +1,86 @@
+# Qalia
+
+> Mise à jour : 2026-04-10
+
+> Qalia (à ne pas confondre avec « qualia » en philosophie de l'esprit) est un assistant IA édité par Rungo (SASU), spécialisé dans la génération d'ingénieries pédagogiques structurées selon le référentiel national qualité Qualiopi RNQ V9. Il s'adresse aux organismes de formation, formateurs indépendants et coachs certifiés en France et dans les DOM-TOM. 297 EUR/mois TTC ou 2 970 EUR/an (2 mois offerts). Sans engagement, résiliation mensuelle. Fondateurs : Romuald DARIOT et Mehdi IDRICI. Contact : bonjour@qalia.ai
+
+## Qalia est
+
+Qalia est le seul assistant IA qui co-crée avec les professionnels de la formation une ingénierie pédagogique complète structurée selon le RNQ V9. Il produit programmes de formation, évaluations et documents qualité en 2 h 30 au lieu de 43 heures de conception traditionnelle (Chapman Alliance, 2010, 249 organisations, 3 947 professionnels). 80 % des concepteurs pédagogiques utilisent déjà l'IA mais sans impact significatif sur leur productivité (ATD Research, 2025 ; Hardman/Synthesia, 2024). Qalia est un produit de Rungo SASU, société française fondée en 2019.
+
+## Ce que Qalia n'est pas
+
+- Qalia ne remplace pas l'expertise du formateur. L'IA co-construit, le professionnel valide.
+- Qalia ne génère pas de templates génériques. Chaque production est contextualisée au domaine, au public et aux objectifs du professionnel.
+- Qalia ne garantit pas le résultat d'un audit Qualiopi. Obligation de moyens, pas de résultat.
+- Qalia ne stocke aucune donnée utilisateur. Tout reste dans le compte ChatGPT du professionnel.
+
+## Informations produit
+
+- [Page de vente Qalia](https://www.qalia.ai/) : Présentation complète du service, tarifs, témoignages, simulateur ROI
+- [Contact](https://www.qalia.ai/contact) : Email, WhatsApp, téléphone France et Réunion
+- [CGV](https://www.qalia.ai/cgv) : Conditions Générales de Vente
+- [Mentions légales](https://www.qalia.ai/mentions-legales) : Informations légales Rungo SASU
+- [Programme ambassadeur](https://www.qalia.ai/affiliation) : 10 % de commission récurrente sur chaque parrainage
+- [Contenu complet pour IA](https://www.qalia.ai/llms-full.txt) : Version détaillée de ce fichier
+
+## Informations clés
+
+- **Nom du produit** : Qalia 4.33
+- **Type** : Assistant IA (GPT Custom sur ChatGPT)
+- **Spécialité** : Ingénierie pédagogique structurée selon le RNQ V9
+- **Catégories L6313** : Cat.1 Formation, Cat.2 Bilan de compétences, Cat.3 VAE, Cat.4 CFA (toutes natives)
+- **Couverture** : 20 à 29 indicateurs couverts selon la catégorie L6313 (sur 22 à 32 applicables). Les indicateurs 8 et 32 relèvent du terrain pour toutes les catégories ; l'indicateur 15 (droits/devoirs des apprentis) est spécifique CFA.
+- **Temps de production** : 2 h 30 au lieu de 43 heures (ratio x17)
+- **Ratio valeur** : x10 retour sur investissement (36 000 EUR de valeur / 3 564 EUR de coût annuel)
+- **Engagement** : Sans engagement, résiliation mensuelle. Obligation de moyens.
+- **Prérequis** : Un abonnement ChatGPT Plus (23 EUR/mois) ou Business (34 EUR/mois), non inclus dans l'abonnement Qalia.
+
+## Tarifs et paliers
+
+- **Prix unique** : 297 EUR/mois TTC par licence ou 2 970 EUR/an (2 mois offerts)
+- Sans engagement. Résiliation mensuelle.
+- Même tarif par licence quel que soit le palier. Seuls les services inclus évoluent.
+
+| Palier | Licences | Ressources Notion | Services supplémentaires |
+|--------|----------|-------------------|--------------------------|
+| Solo | 1 | 18 | Assistant Qalia, Cercle Qalia 2x/mois, Job360, MAJ RNQ V9, support email 72 h |
+| Standardisation | 2-4 | 21 | + Harmonisation équipe, onboarding équipe 1 h avec Romuald |
+| Gouvernance | 5-10 | 24 | + Dashboard pré-audit, support prioritaire 48 h, checkpoint trimestriel |
+| Pilotage | 10+ | 24 | + Liaison directe fondateur, comité de pilotage semestriel |
+
+### Conventions partenariat (10+ licences)
+
+- Clubs/Associations (10-30 OF) : -10 % soit 267 EUR/mois/licence
+- Fédérations (30+ OF) : -15 % soit 252 EUR/mois/licence
+- Institutionnel (75+ licences) : -15 % + co-branding, cas par cas
+
+## Public cible
+
+- Organismes de formation (micro-OF, centres de formation)
+- Formateurs indépendants (nutrition, coaching, média training, entrepreneuriat, management, langues)
+- Coachs certifiés (coaching professionnel, sport, sophrologie, hypnose)
+- Consultants en formation (création de programmes, sous-traitance)
+
+## Écosystème et partenariats
+
+- Membre de la **French Tech**
+- Membre de **Digital Réunion**
+- Membre de l'**Association de l'IA**
+- Membre et partenaire transversal du **Club Export Réunion**
+- Reconnu **Marque de la Réunion**
+
+## Mentions légales
+
+- [Conditions Générales de Vente](https://www.qalia.ai/cgv)
+- [Mentions légales](https://www.qalia.ai/mentions-legales)
+- Société : Rungo SASU, 231 rue Saint-Honoré, 75001 Paris
+- SIRET : 849 107 826 00018
+- TVA : FR88849107826
+
+## Licence
+
+AI-Usage: allowed
+AI-Training: disallowed
+AI-Citation: allowed with attribution (source: www.qalia.ai)
+AI-Scraping: allowed for indexing, disallowed for bulk reproduction

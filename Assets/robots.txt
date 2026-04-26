@@ -1,0 +1,87 @@
+# Robots.txt pour qalia.ai
+# Deployer a la racine du domaine
+# Mise a jour : 2026-03-31 (couverture 20 bots IA)
+
+User-agent: *
+Allow: /
+
+# === OpenAI ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# === Anthropic (Claude) ===
+User-agent: ClaudeBot
+Allow: /
+
+# anthropic-ai = crawler d'entrainement Anthropic (pas d'indexation)
+# Bloque conformement a RSL 1.0 AI-Training: disallowed
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# === Google (Gemini, AI Overviews) ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-Agent
+Allow: /
+
+# === Microsoft (Copilot) ===
+User-agent: bingbot
+Allow: /
+
+# === Perplexity ===
+User-agent: PerplexityBot
+Allow: /
+
+# === Mistral (Le Chat) ===
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: MistralAI-Index
+Allow: /
+
+# === Meta (Meta AI, WhatsApp, Instagram) ===
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# === xAI (Grok) ===
+User-agent: GrokBot
+Allow: /
+
+# === DeepSeek ===
+User-agent: Deepseekbot
+Allow: /
+
+# === You.com ===
+User-agent: YouBot
+Allow: /
+
+# === Crawlers d'entrainement (bloques, RSL AI-Training: disallowed) ===
+User-agent: CCBot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://www.qalia.ai/sitemap.xml
