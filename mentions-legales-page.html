@@ -1,0 +1,151 @@
+<style>
+    :root {
+      --bleu-canard: #1B7E94;
+      --bleu-dark: #156A7D;
+      --bordeaux: #932951;
+      --noir: #1A1A1A;
+      --gris: #5A6A70;
+      --gris-clair: #E8EEF0;
+      --blanc-casse: #F7F9FA;
+      --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --max-width: 800px;
+
+      /* Golden Ratio Design System */
+      --fs-h1: 1.728rem;
+      --fs-h2: 1.44rem;
+      --fs-h4: 1.2rem;
+      --lh-body: 1.618;
+      --space-sm: 0.813rem;
+      --space-md: 1.313rem;
+      --space-lg: 2.125rem;
+    }
+
+    @media (min-width: 768px) {
+      :root { --fs-h1: 2.369rem; --fs-h2: 1.777rem; }
+    }
+
+    @media (min-width: 1024px) {
+      :root { --fs-h1: 2.618rem; --fs-h2: 1.618rem; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--noir);
+      line-height: var(--lh-body);
+      background: #fff;
+    }
+
+    .page-header {
+      background: linear-gradient(170deg, var(--bleu-dark) 0%, var(--bleu-canard) 100%);
+      color: #fff;
+      padding: var(--space-xl) var(--space-md) var(--space-lg);
+      text-align: center;
+    }
+
+    .page-header a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: var(--fs-small);
+    }
+
+    .page-header a:hover { color: #fff; }
+
+    .page-header h1 {
+      font-size: var(--fs-h1);
+      margin-top: var(--space-sm);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    h2 {
+      color: var(--bleu-canard);
+      font-size: var(--fs-h2);
+      margin: var(--space-lg) 0 var(--space-sm);
+      padding-bottom: var(--space-xs);
+      border-bottom: 2px solid var(--gris-clair);
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p, ul, ol { margin-bottom: var(--space-sm); }
+    ul, ol { padding-left: var(--space-md); }
+    li { margin-bottom: var(--space-xs); }
+
+    strong { color: var(--noir); }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+      border-top: 1px solid var(--gris-clair);
+      color: var(--gris);
+      font-size: var(--fs-small);
+    }
+
+    .footer a {
+      color: var(--bleu-canard);
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    .last-update {
+      text-align: center;
+      color: var(--gris);
+      font-size: var(--fs-small);
+      font-style: italic;
+      margin-bottom: var(--space-lg);
+    }
+
+    *:focus-visible {
+      outline: 3px solid var(--bleu-canard);
+      outline-offset: 2px;
+    }
+  </style>
+<div class="page-header">
+  <p style="margin-bottom:0.5rem;"><a href="/" style="color:#fff;text-decoration:none;">&larr; Retour &agrave; Qalia<sup style="font-size:0.5em;">TM</sup></a></p>
+  <h1>Mentions L&eacute;gales</h1>
+  <p style="opacity:0.9;">&Eacute;diteur &middot; H&eacute;bergement &middot; Propri&eacute;t&eacute; intellectuelle</p>
+</div>
+<main style="max-width:800px;margin:0 auto;padding:2rem 1.5rem;">
+<p style="text-align:center;font-style:italic;font-size:0.9rem;color:#5A6A70;margin-bottom:2rem;">Derni&egrave;re mise &agrave; jour : avril 2026</p>
+
+<h2>Article 1 | &Eacute;diteur du site</h2>
+<p><strong>Raison sociale :</strong> SAS DARIOT Romuald (nom commercial : Rungo)</p>
+<p><strong>Forme juridique :</strong> Soci&eacute;t&eacute; par Actions Simplifi&eacute;e (SAS) &agrave; associ&eacute; unique</p>
+<p><strong>Capital social :</strong> 1 000 EUR</p>
+<p><strong>Si&egrave;ge social :</strong> 231 rue Saint-Honor&eacute;, 75001 Paris, France</p>
+<p><strong>SIRET :</strong> 849 107 826 00018</p>
+<p><strong>RCS :</strong> Paris</p>
+<p><strong>TVA intracommunautaire :</strong> FR88849107826</p>
+<p><strong>Directeur de la publication :</strong> Romuald DARIOT, en qualit&eacute; de Pr&eacute;sident</p>
+<p><strong>Contact :</strong> <a href="mailto:bonjour@qalia.ai">bonjour@qalia.ai</a></p>
+
+<h2>Article 2 | H&eacute;bergement</h2>
+<p><strong>H&eacute;bergeur du site :</strong> Systeme.io SAS</p>
+<p><strong>Adresse :</strong> 39 rue Marbeuf, 75008 Paris, France</p>
+<p><strong>Site web :</strong> systeme.io</p>
+
+<h2>Article 3 | Propri&eacute;t&eacute; intellectuelle</h2>
+<p>L ensemble du contenu du site (textes, images, logos, charte graphique, marque Qalia) est la propri&eacute;t&eacute; exclusive de SAS DARIOT Romuald, sauf mention contraire. Toute reproduction, repr&eacute;sentation, modification ou exploitation, totale ou partielle, sans l autorisation expresse de l &eacute;diteur est interdite et constitue une contrefa&ccedil;on (articles L335-2 et suivants du Code de la propri&eacute;t&eacute; intellectuelle).</p>
+<p>La marque <strong>Qalia<sup>TM</sup></strong> est en cours de protection par d&eacute;p&ocirc;t &agrave; l INPI.</p>
+
+<h2>Article 4 | Donn&eacute;es personnelles</h2>
+<p>Conform&eacute;ment au R&egrave;glement G&eacute;n&eacute;ral sur la Protection des Donn&eacute;es (RGPD - UE 2016/679) et &agrave; la Loi Informatique et Libert&eacute;s, vous disposez d un droit d acc&egrave;s, de rectification, d effacement, de limitation, d opposition et de portabilit&eacute; de vos donn&eacute;es personnelles.</p>
+<p>Pour exercer ces droits : <a href="mailto:bonjour@qalia.ai">bonjour@qalia.ai</a></p>
+<p>D&eacute;tails complets : <a href="/politique-confidentialite">Politique de confidentialit&eacute;</a></p>
+
+<h2>Article 5 | Cookies</h2>
+<p>Le site utilise des cookies pour assurer son bon fonctionnement, mesurer l audience et am&eacute;liorer l exp&eacute;rience utilisateur. Pour plus d informations : <a href="/cookies">Politique cookies</a></p>
+
+<h2>Article 6 | Litiges</h2>
+<p>Les pr&eacute;sentes mentions l&eacute;gales sont r&eacute;gies par le droit fran&ccedil;ais. Tout litige rel&egrave;ve de la comp&eacute;tence exclusive des tribunaux de Paris.</p>
+
+<hr style="margin:3rem 0;border:none;border-top:1px solid #E8EEF0;">
+<p style="text-align:center;font-size:0.9rem;color:#5A6A70;">&copy; 2026 SAS DARIOT Romuald (Rungo). Tous droits r&eacute;serv&eacute;s.<br><a href="/cgv" style="color:#1B7E94;">CGV</a> &middot; <a href="/mentions-legales" style="color:#1B7E94;">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite" style="color:#1B7E94;">Confidentialit&eacute;</a> &middot; <a href="/cookies" style="color:#1B7E94;">Cookies</a> &middot; <a href="/contact" style="color:#1B7E94;">Contact</a></p>
+</main>

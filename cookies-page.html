@@ -1,0 +1,164 @@
+<style>
+    :root {
+      --bleu-canard: #1B7E94;
+      --bleu-dark: #156A7D;
+      --bordeaux: #932951;
+      --noir: #1A1A1A;
+      --gris: #5A6A70;
+      --gris-clair: #E8EEF0;
+      --blanc-casse: #F7F9FA;
+      --font-main: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --max-width: 800px;
+
+      /* Golden Ratio Design System */
+      --fs-h1: 1.728rem;
+      --fs-h2: 1.44rem;
+      --fs-h4: 1.2rem;
+      --lh-body: 1.618;
+      --space-sm: 0.813rem;
+      --space-md: 1.313rem;
+      --space-lg: 2.125rem;
+    }
+
+    @media (min-width: 768px) {
+      :root { --fs-h1: 2.369rem; --fs-h2: 1.777rem; }
+    }
+
+    @media (min-width: 1024px) {
+      :root { --fs-h1: 2.618rem; --fs-h2: 1.618rem; }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--noir);
+      line-height: var(--lh-body);
+      background: #fff;
+    }
+
+    .page-header {
+      background: linear-gradient(170deg, var(--bleu-dark) 0%, var(--bleu-canard) 100%);
+      color: #fff;
+      padding: var(--space-xl) var(--space-md) var(--space-lg);
+      text-align: center;
+    }
+
+    .page-header a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: var(--fs-small);
+    }
+
+    .page-header a:hover { color: #fff; }
+
+    .page-header h1 {
+      font-size: var(--fs-h1);
+      margin-top: var(--space-sm);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    h2 {
+      color: var(--bleu-canard);
+      font-size: var(--fs-h2);
+      margin: var(--space-lg) 0 var(--space-sm);
+      padding-bottom: var(--space-xs);
+      border-bottom: 2px solid var(--gris-clair);
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p, ul, ol { margin-bottom: var(--space-sm); }
+    ul, ol { padding-left: var(--space-md); }
+    li { margin-bottom: var(--space-xs); }
+
+    strong { color: var(--noir); }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-lg) var(--space-md);
+      border-top: 1px solid var(--gris-clair);
+      color: var(--gris);
+      font-size: var(--fs-small);
+    }
+
+    .footer a {
+      color: var(--bleu-canard);
+      text-decoration: none;
+    }
+
+    .footer a:hover { text-decoration: underline; }
+
+    .last-update {
+      text-align: center;
+      color: var(--gris);
+      font-size: var(--fs-small);
+      font-style: italic;
+      margin-bottom: var(--space-lg);
+    }
+
+    *:focus-visible {
+      outline: 3px solid var(--bleu-canard);
+      outline-offset: 2px;
+    }
+  </style>
+<div class="page-header">
+  <p style="margin-bottom:0.5rem;"><a href="/" style="color:#fff;text-decoration:none;">&larr; Retour &agrave; Qalia<sup style="font-size:0.5em;">TM</sup></a></p>
+  <h1>Politique Cookies</h1>
+  <p style="opacity:0.9;">Conforme RGPD et recommandations CNIL</p>
+</div>
+<main style="max-width:800px;margin:0 auto;padding:2rem 1.5rem;">
+<p style="text-align:center;font-style:italic;font-size:0.9rem;color:#5A6A70;margin-bottom:2rem;">Derni&egrave;re mise &agrave; jour : avril 2026</p>
+
+<h2>Article 1 | Qu est-ce qu un cookie ?</h2>
+<p>Un cookie est un petit fichier texte d&eacute;pos&eacute; sur votre terminal lors de la consultation d un site. Il permet au site de reconna&icirc;tre votre navigateur et d enregistrer certaines informations.</p>
+
+<h2>Article 2 | Types de cookies utilis&eacute;s</h2>
+
+<h3>Cookies strictement n&eacute;cessaires (sans consentement)</h3>
+<p>Indispensables au fonctionnement. Ne peuvent pas &ecirc;tre d&eacute;sactiv&eacute;s.</p>
+<ul>
+<li>Cookie de session</li>
+<li>Cookie de pr&eacute;f&eacute;rence linguistique</li>
+<li>Cookie de protection CSRF</li>
+</ul>
+
+<h3>Cookies de mesure d audience (avec consentement)</h3>
+<p>Outil anonymis&eacute; pour mesurer l audience sans identifier les visiteurs.</p>
+<ul>
+<li>Dur&eacute;e : 13 mois maximum</li>
+<li>Donn&eacute;es : pages visit&eacute;es, dur&eacute;e, terminal, navigateur (anonymis&eacute;s)</li>
+<li>Pas de partage avec tiers commerciaux</li>
+</ul>
+
+<h3>Cookies tiers (avec consentement)</h3>
+<ul>
+<li><strong>Cookiebot</strong> (gestion du consentement RGPD)</li>
+<li><strong>Stripe</strong> (paiement s&eacute;curis&eacute;, lors de la souscription)</li>
+</ul>
+
+<h2>Article 3 | G&eacute;rer vos pr&eacute;f&eacute;rences</h2>
+<ul>
+<li>Le bandeau de consentement &agrave; la premi&egrave;re visite</li>
+<li>L ic&ocirc;ne Cookiebot en bas de page</li>
+<li>Les param&egrave;tres de votre navigateur (Chrome, Firefox, Safari, Edge)</li>
+</ul>
+
+<h2>Article 4 | Cons&eacute;quences du refus</h2>
+<p>Le refus des cookies analytiques n emp&ecirc;che pas l usage du site. Le refus des cookies strictement n&eacute;cessaires peut emp&ecirc;cher certaines fonctionnalit&eacute;s.</p>
+
+<h2>Article 5 | Dur&eacute;e</h2>
+<p>Conserv&eacute;s 13 mois maximum (recommandations CNIL). Au-del&agrave;, votre consentement vous est &agrave; nouveau demand&eacute;.</p>
+
+<h2>Article 6 | Vos droits</h2>
+<p>Conform&eacute;ment au RGPD, vous pouvez exercer vos droits d acc&egrave;s, de rectification, d opposition et d effacement &agrave; tout moment : <a href="mailto:bonjour@qalia.ai">bonjour@qalia.ai</a></p>
+<p>R&eacute;clamation aupr&egrave;s de la CNIL : <a href="https://www.cnil.fr">www.cnil.fr</a></p>
+
+<hr style="margin:3rem 0;border:none;border-top:1px solid #E8EEF0;">
+<p style="text-align:center;font-size:0.9rem;color:#5A6A70;">&copy; 2026 SAS DARIOT Romuald (Rungo). Tous droits r&eacute;serv&eacute;s.<br><a href="/cgv" style="color:#1B7E94;">CGV</a> &middot; <a href="/mentions-legales" style="color:#1B7E94;">Mentions l&eacute;gales</a> &middot; <a href="/politique-confidentialite" style="color:#1B7E94;">Confidentialit&eacute;</a> &middot; <a href="/cookies" style="color:#1B7E94;">Cookies</a> &middot; <a href="/contact" style="color:#1B7E94;">Contact</a></p>
+</main>
