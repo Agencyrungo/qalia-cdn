@@ -1,3 +1,101 @@
+    // ============================================
+    // PATCH RUNTIME 2026-04-27 : corrections HTML applicables au runtime
+    // Permet de corriger le HTML servi par Systeme.io sans re-injection manuelle.
+    // Couvre : footer URLs absolues, GPT-4o, Marque Reunion retiree,
+    //          phrase 1 photo reformulee, coach professionnel ferme par defaut,
+    //          floatingCta supprime, JSON-LD award nettoye.
+    // ============================================
+    (function patchHtmlRuntime() {
+      function applyPatches() {
+        try {
+          // 1. Footer links : chemins relatifs commun/ vers URLs absolues qalia.ai
+          var footerMap = {
+            'commun/Mentions-légales-Qalia.html': 'https://www.qalia.ai/mentions-legales',
+            'commun/Mentions-l%C3%A9gales-Qalia.html': 'https://www.qalia.ai/mentions-legales',
+            'commun/CGV-Qalia.html': 'https://www.qalia.ai/cgv',
+            'commun/Politique-de-confidentialité-Qalia.html': 'https://www.qalia.ai/politique-confidentialite',
+            'commun/Politique-de-confidentialit%C3%A9-Qalia.html': 'https://www.qalia.ai/politique-confidentialite',
+            'commun/Cookies-Qalia.html': 'https://www.qalia.ai/cookies',
+            'commun/Contact-Qalia.html': 'https://www.qalia.ai/contact',
+            'commun/Affiliation-Qalia.html': 'https://www.qalia.ai/affiliation'
+          };
+          document.querySelectorAll('a[href^="commun/"]').forEach(function(a) {
+            var h = a.getAttribute('href');
+            if (footerMap[h]) a.setAttribute('href', footerMap[h]);
+          });
+
+          // 2. floatingCta : retire du DOM (au cas ou il est encore dans le HTML statique)
+          var floating = document.getElementById('floatingCta');
+          if (floating) floating.remove();
+
+          // 3. Coach professionnel details : ferme par defaut + alignement gauche
+          document.querySelectorAll('details.info-callout').forEach(function(d) {
+            d.removeAttribute('open');
+            d.style.textAlign = 'left';
+            var summary = d.querySelector('summary');
+            if (summary) {
+              summary.style.justifyContent = 'flex-start';
+              summary.style.textAlign = 'left';
+            }
+          });
+
+          // 4. Patch texte : GPT-4 vers GPT-4o (uniquement dans les paragraphes du recit fondateur)
+          var nodeIterator = document.createNodeIterator(document.body, NodeFilter.SHOW_TEXT);
+          var node;
+          var marqueReplaced = 0;
+          while (node = nodeIterator.nextNode()) {
+            var t = node.nodeValue;
+            if (!t) continue;
+            var changed = false;
+            // GPT-4 vers GPT-4o (mais pas GPT-4o, GPT-4Turbo, etc.)
+            if (/GPT-4(?!o)(?![A-Za-z])/.test(t)) {
+              t = t.replace(/GPT-4(?!o)(?![A-Za-z])/g, 'GPT-4o');
+              changed = true;
+            }
+            // Phrase 1 photo
+            if (t.indexOf('Le dialogue guidé (gauche)') !== -1) {
+              t = 'Aperçu Qalia : amorces de conversation pour structurer vos parcours conformes RNQ V9';
+              changed = true;
+            }
+            // Marque de la Reunion : retirer du membre list (separateur middot)
+            if (t.indexOf('Marque de la Réunion') !== -1) {
+              t = t.replace(/\s*·\s*Marque de la Réunion/g, '');
+              t = t.replace(/Marque de la Réunion\s*·?\s*/g, '');
+              changed = true;
+              marqueReplaced++;
+            }
+            if (changed) node.nodeValue = t;
+          }
+
+          // 5. Liens Notion app.qalia.ai
+          document.querySelectorAll('a[href="https://www.qalia.ai/decouverte"]').forEach(function(a) {
+            a.setAttribute('href', 'https://app.qalia.ai/decouverte?source=copy_link');
+          });
+
+          // 6. JSON-LD : retirer "award" si present (pour SEO crawlers, optionnel mais propre)
+          document.querySelectorAll('script[type="application/ld+json"]').forEach(function(s) {
+            try {
+              var data = JSON.parse(s.textContent);
+              if (data && Array.isArray(data.award)) {
+                data.award = [];
+                s.textContent = JSON.stringify(data, null, 2);
+              }
+            } catch (e) {}
+          });
+
+          if (window.console && console.debug) console.debug('[Qalia patch runtime] applied');
+        } catch (e) {
+          if (window.console && console.warn) console.warn('[Qalia patch runtime] error:', e);
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyPatches);
+      } else {
+        applyPatches();
+      }
+    })();
+
     // ---- Nav scroll effect ----
     (function() {
       var nav = document.getElementById('nav');
