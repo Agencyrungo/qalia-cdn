@@ -1,0 +1,445 @@
+<style>
+:root {
+      --bleu-canard: #1B7E94;
+      --bleu-dark: #156A7D;
+      --bleu-light: #2A9DB6;
+      --bordeaux: #932951;
+      --bordeaux-dark: #7A2244;
+      --noir: #1A1A1A;
+      --gris: #5A6A70;
+      --gris-clair: #E8EEF0;
+      --blanc-casse: #F7F9FA;
+      --font-main: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+      --max-width: 800px;
+
+      /* Golden Ratio Design System (phi = 1.618) */
+      --fs-caption: 0.694rem;
+      --fs-small: 0.833rem;
+      --fs-body: 1rem;
+      --fs-lead: 1.125rem;
+      --fs-h4: 1.2rem;
+      --fs-h3: 1.32rem;          /* ~21px, différencié de h4 */
+      --fs-h2: 1.44rem;
+      --fs-h1: 1.728rem;
+      --lh-body: 1.618;
+      --lh-heading: 1.2;
+      --lh-tight: 1.15;
+
+      /* Spacing : Fibonacci (3, 5, 8, 13, 21, 34, 55, 89) */
+      --space-3xs: 0.188rem;
+      --space-2xs: 0.313rem;
+      --space-xs: 0.5rem;
+      --space-sm: 0.813rem;
+      --space-md: 1.313rem;
+      --space-lg: 2.125rem;
+      --space-xl: 3.438rem;
+      --space-2xl: 5.563rem;
+      --space-3xl: 7rem;
+
+      /* Couleurs neutres */
+      --blanc: #ffffff;
+
+      /* Border-radius tokens */
+      --radius-btn: 0.75rem;
+      --radius-card: 1rem;
+
+      /* Zen Architect tokens */
+      --enso: cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-zen: 0 4px 20px rgba(14, 30, 35, 0.05);
+    }
+
+    @media (min-width: 768px) {
+      :root {
+        --fs-h1: 2.369rem;
+        --fs-h2: 1.777rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.333rem;
+        --fs-lead: 1.125rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      :root {
+        --fs-h1: 2.618rem;   /* 42px */
+        --fs-h2: 1.777rem;   /* 28px */
+        --fs-h3: 1.44rem;    /* 23px */
+        --fs-h4: 1.333rem;   /* 21px */
+        --fs-lead: 1.25rem;  /* 20px */
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--noir);
+      line-height: var(--lh-body);
+      background: var(--blanc);
+    }
+
+    .page-header {
+      background: linear-gradient(170deg, var(--bleu-dark) 0%, var(--bleu-canard) 100%);
+      color: var(--blanc);
+      padding: var(--space-xl) var(--space-md) var(--space-lg);
+      text-align: center;
+    }
+
+    .page-header a {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      font-size: var(--fs-small);
+    }
+
+    .page-header a:hover { color: var(--blanc); }
+    .page-header a:focus-visible { outline-color: var(--blanc); }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--fs-h1);
+      line-height: var(--lh-tight);
+      margin-top: var(--space-sm);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      color: var(--bleu-canard);
+      font-size: var(--fs-h2);
+      font-weight: 400;
+      line-height: var(--lh-heading);
+      margin: var(--space-lg) 0 var(--space-sm);
+      padding-bottom: var(--space-xs);
+      border-bottom: 2px solid var(--gris-clair);
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p, ul { margin-bottom: var(--space-sm); }
+    ul { padding-left: var(--space-md); }
+    li { margin-bottom: var(--space-xs); }
+
+    .container strong { color: var(--noir); }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: var(--space-md);
+      font-size: var(--fs-small);
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid var(--gris-clair);
+    }
+
+    thead th {
+      background: var(--bleu-canard);
+      color: var(--blanc);
+      text-align: left;
+      padding: var(--space-xs) var(--space-sm);
+      font-weight: 600;
+    }
+
+    tbody td {
+      padding: var(--space-xs) var(--space-sm);
+      border-bottom: 1px solid var(--gris-clair);
+      vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+      background: var(--blanc-casse);
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      thead {
+        display: none;
+      }
+      tbody td {
+        padding: var(--space-xs) var(--space-sm);
+        padding-left: 40%;
+        position: relative;
+        border-bottom: 1px solid var(--gris-clair);
+      }
+      tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: var(--space-sm);
+        width: 35%;
+        font-weight: 600;
+        color: var(--bleu-canard);
+      }
+      tbody tr {
+        margin-bottom: var(--space-sm);
+        border: 1px solid var(--gris-clair);
+        border-radius: var(--radius-btn);
+      }
+    }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      background: var(--noir);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: var(--fs-small);
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      letter-spacing: 0.02em;
+      display: block;
+      font-size: var(--fs-h4);
+      font-weight: 400;
+      color: var(--blanc);
+      text-decoration: none;
+    }
+
+    .footer-brand:visited { color: var(--blanc); }
+    .footer-brand:hover { opacity: 0.85; }
+
+    .footer-brand .tm {
+      font-size: 0.236em; /* golden ratio triple minor (1/phi³) */
+      vertical-align: super;
+      font-weight: 400;
+    }
+
+    .footer-baseline {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: none;
+      transition: color 0.2s var(--enso);
+    }
+
+    .footer-links a:hover { color: var(--bleu-light); }
+    .footer-links a:focus-visible { color: var(--bleu-light); outline-color: rgba(255, 255, 255, 0.9); }
+
+    *:focus-visible {
+      outline: 3px solid var(--bleu-canard);
+      outline-offset: 2px;
+    }
+
+
+    @media (pointer: coarse) {
+      .btn, .footer a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    /* OVERRIDE Systeme.io : alignement à gauche du CONTENU (header et footer restent centrés) */
+    .container,
+    .container p,
+    .container h2,
+    .container h3,
+    .container h4,
+    .container ul,
+    .container li,
+    .notice-48h,
+    .notice-72h-reminder,
+    .onboarding-title,
+    .section-divider,
+    .section-title,
+    .section-subtitle,
+    .discovery-card,
+    .discovery-card__title,
+    .discovery-card__lead,
+    .discovery-card__closing,
+    .discovery-card__closing-note,
+    .discovery-card__note,
+    .discovery-card__badge,
+    .affiliation-cta,
+    .affiliation-cta h2,
+    .affiliation-cta p,
+    .book-section,
+    .book-section h2,
+    .book-section p,
+    .cta-section,
+    .cta-section .cta-note,
+    .conditions-section,
+    .conditions-section h2,
+    .advantage-card,
+    .steps-section,
+    .step,
+    .demo-cta,
+    .demo-cta p,
+    .general-contact,
+    .company-info,
+    .rgpd-box,
+    .rgpd-box h3,
+    .rgpd-box p,
+    .resource-card,
+    main { text-align: left; }
+    /* Le footer et les boutons centrés gardent leur alignement original */
+    .footer, .footer-links, .footer-baseline { text-align: center; }
+    /* Conteneurs flex/grid : on garde le layout d'origine, on aligne juste le texte */
+    .discovery-card__items { margin-left: 0; }
+    .discovery-card__lead { margin-left: 0; margin-right: 0; }
+    .book-section img { display: block; margin-left: 0; margin-right: auto; }
+    .affiliation-cta p { margin-left: 0; margin-right: 0; }
+    .book-section p { margin-left: 0; margin-right: 0; }
+    .demo-cta p { margin-left: 0; margin-right: 0; }
+
+  </style>
+  <!-- /SYSTEME.IO BLOCK -->
+</head>
+
+<header class="page-header">
+    <a href="/home">
+      &larr; Retour à <strong style="font-family:'DM Serif Display', Georgia, serif; font-style:italic; font-weight:400;">Qalia<sup style="font-size: 0.6em; font-weight: 400;">TM</sup></strong>
+    </a>
+    <h1>Politique de cookies</h1>
+    <p style="color: rgba(255,255,255,0.95); font-size: var(--fs-body); margin-top: var(--space-2xs);">Partagé. Pas remplacé.</p>
+  </header>
+
+  <main id="main-content">
+  <div class="container">
+
+    <h2>1. Qu'est-ce qu'un cookie</h2>
+    <p>
+      Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, tablette, smartphone)
+      lors de la consultation d'un site web. Il permet au site de mémoriser des informations relatives
+      à votre navigation (préférences, identifiant de session, choix de consentement) afin de faciliter
+      vos visites ultérieures et de garantir le bon fonctionnement technique du site.
+    </p>
+    <p>
+      Les cookies désignent plus généralement tout fichier déposé lors de la consultation d'un site web
+      dans l'équipement terminal de l'utilisateur, ayant pour objet la lecture ou l'écriture d'informations
+      dans cet équipement.
+    </p>
+
+    <h2>2. Cookies utilisés sur ce site</h2>
+    <p>
+      Ce site utilise uniquement des <strong>cookies strictement nécessaires</strong> au fonctionnement
+      technique et à la gestion du consentement.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Cookie</th>
+          <th>Éditeur</th>
+          <th>Finalité</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Cookie">Cookies techniques</td>
+          <td data-label="Éditeur">Systeme.io</td>
+          <td data-label="Finalité">Fonctionnement du site (sessions, préférences)</td>
+          <td data-label="Durée">Session ou 13 mois max.</td>
+        </tr>
+        <tr>
+          <td data-label="Cookie">CookieConsent</td>
+          <td data-label="Éditeur">Cookiebot (Cybot A/S)</td>
+          <td data-label="Finalité">Mémorisation de votre choix de consentement aux cookies</td>
+          <td data-label="Durée">12 mois</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <strong>Aucun cookie publicitaire, de tracking tiers ou de réseaux sociaux n'est déposé sur ce site.</strong>
+    </p>
+
+    <h2>3. Gestion du consentement</h2>
+    <p>
+      Un bandeau d'information apparaît lors de votre première visite sur le site pour vous informer
+      de la présence des cookies et recueillir, le cas échéant, votre consentement.
+    </p>
+    <p>
+      La gestion du consentement est assurée par <strong>CookieBot</strong> (Cybot A/S). Vous pouvez
+      modifier vos préférences à tout moment en cliquant sur le lien de gestion des cookies accessible
+      en bas de chaque page du site, ou via le bandeau de consentement.
+    </p>
+
+    <h2>4. Paramétrage via votre navigateur</h2>
+    <p>
+      Vous pouvez également configurer votre navigateur pour refuser ou supprimer les cookies.
+      Voici les liens vers les pages d'aide des principaux navigateurs :
+    </p>
+    <ul>
+      <li><a href="https://support.mozilla.org/fr/kb/cookies-informations-sites-enregistrent" target="_blank" rel="nofollow noopener" style="color: var(--bleu-canard);" title="Ouvre dans un nouvel onglet">Firefox</a></li>
+      <li><a href="https://support.google.com/chrome/answer/95647?hl=fr" target="_blank" rel="nofollow noopener" style="color: var(--bleu-canard);" title="Ouvre dans un nouvel onglet">Chrome</a></li>
+      <li><a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="nofollow noopener" style="color: var(--bleu-canard);" title="Ouvre dans un nouvel onglet">Safari</a></li>
+      <li><a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="nofollow noopener" style="color: var(--bleu-canard);" title="Ouvre dans un nouvel onglet">Edge</a></li>
+    </ul>
+    <p>
+      La désactivation des cookies techniques peut affecter le bon fonctionnement du site.
+    </p>
+
+    <h2>5. Durée de conservation des cookies</h2>
+    <p>
+      La durée maximale de conservation des cookies est de <strong>13 mois</strong> après leur premier
+      dépôt dans votre terminal. Cette durée n'est pas prolongée à chaque visite, conformément aux
+      recommandations de la CNIL.
+    </p>
+
+    <h2>6. Déclaration CookieBot</h2>
+    <p>
+      La déclaration complète des cookies utilisés sur ce site est générée
+      par CookieBot et affichée ci-dessous :
+    </p>
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/e4b8fa00-1d58-4e9e-b3c1-961b34918ec6/cd.js" type="text/javascript" async></script>
+
+    <h2>7. Contact</h2>
+    <p>
+      Pour toute question relative à cette politique de cookies ou à l'utilisation de vos données
+      personnelles, vous pouvez contacter notre Délégué à la protection des données (DPO) :
+    </p>
+    <p>
+      <strong>Romuald DARIOT</strong><br>
+      <a href="mailto:bonjour@qalia.ai" style="color: var(--bleu-canard);">bonjour@qalia.ai</a><br>
+      SAS DARIOT Romuald, 231 rue Saint-Honoré, 75001 Paris, France<br>
+      SIRET : 849 107 826 00018
+    </p>
+
+    <h2>8. Mise à jour</h2>
+    <p>
+      La présente politique de cookies a été mise à jour le <strong>21 mars 2026</strong>.
+      SAS DARIOT Romuald se réserve le droit de la modifier à tout moment afin de se conformer
+      aux évolutions législatives et réglementaires. Toute modification substantielle
+      sera signalée par un nouveau bandeau de consentement.
+    </p>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <a href="/home" class="footer-brand">Qalia<sup class="tm">TM</sup></a>
+    <p class="footer-baseline">&Eacute;dit&eacute; par Rungo</p>
+    <nav class="footer-links" aria-label="Pied de page">
+      <a href="/mentions-legales" target="_blank" rel="noopener">Mentions légales</a>
+      <a href="/cgv" target="_blank" rel="noopener">CGV</a>
+      <a href="/politique-confidentialite" target="_blank" rel="noopener">Confidentialité</a>
+      <span aria-current="page" style="color: var(--bleu-light); font-weight: 600;">Cookies</span>
+      <a href="/contact" target="_blank" rel="noopener">Contact</a>
+    </nav>
+    <p>&copy; 2026 SAS DARIOT Romuald. Tous droits r&eacute;serv&eacute;s.</p>
+  </footer>
