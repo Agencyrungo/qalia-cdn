@@ -1,0 +1,379 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+      --bleu-canard: #1B7E94;
+      --bleu-dark: #156A7D;
+      --bleu-light: #2A9DB6;
+      --bordeaux: #932951;
+      --bordeaux-dark: #7A2244;
+      --noir: #1A1A1A;
+      --gris: #5A6A70;
+      --gris-clair: #E8EEF0;
+      --blanc-casse: #F7F9FA;
+      --font-main: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+      --max-width: 800px;
+
+      /* Golden Ratio Design System (phi = 1.618) */
+      --fs-caption: 0.694rem;
+      --fs-small: 0.833rem;
+      --fs-body: 1rem;
+      --fs-lead: 1.125rem;
+      --fs-h4: 1.2rem;
+      --fs-h3: 1.32rem;          /* ~21px, différencié de h4 */
+      --fs-h2: 1.44rem;
+      --fs-h1: 1.728rem;
+      --lh-body: 1.618;
+      --lh-heading: 1.2;
+      --lh-tight: 1.15;
+
+      /* Spacing : Fibonacci (3, 5, 8, 13, 21, 34, 55, 89) */
+      --space-3xs: 0.188rem;
+      --space-2xs: 0.313rem;
+      --space-xs: 0.5rem;
+      --space-sm: 0.813rem;
+      --space-md: 1.313rem;
+      --space-lg: 2.125rem;
+      --space-xl: 3.438rem;
+      --space-2xl: 5.563rem;
+      --space-3xl: 7rem;
+
+      /* Couleurs neutres */
+      --blanc: #ffffff;
+
+      /* Border-radius tokens */
+      --radius-btn: 0.75rem;
+      --radius-card: 1rem;
+
+      /* Zen Architect tokens */
+      --enso: cubic-bezier(0.4, 0, 0.2, 1);
+      --shadow-zen: 0 4px 20px rgba(14, 30, 35, 0.05);
+    }
+
+    @media (min-width: 768px) {
+      :root {
+        --fs-h1: 2.369rem;
+        --fs-h2: 1.777rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.333rem;
+        --fs-lead: 1.125rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      :root {
+        --fs-h1: 2.618rem;   /* 42px */
+        --fs-h2: 1.777rem;   /* 28px */
+        --fs-h3: 1.44rem;    /* 23px */
+        --fs-h4: 1.333rem;   /* 21px */
+        --fs-lead: 1.25rem;  /* 20px */
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--noir);
+      line-height: var(--lh-body);
+      background: var(--blanc);
+    }
+
+    .page-header {
+      background: linear-gradient(170deg, var(--bleu-dark) 0%, var(--bleu-canard) 100%);
+      color: var(--blanc);
+      padding: var(--space-xl) var(--space-md) var(--space-lg);
+      text-align: center;
+    }
+
+    .page-header a {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      font-size: var(--fs-small);
+    }
+
+    .page-header a:hover { color: var(--blanc); }
+    .page-header a:focus-visible { outline-color: var(--blanc); }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: var(--fs-h1);
+      line-height: var(--lh-tight);
+      margin-top: var(--space-sm);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--space-lg) var(--space-md);
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      color: var(--bleu-canard);
+      font-size: var(--fs-h2);
+      font-weight: 400;
+      line-height: var(--lh-heading);
+      margin: var(--space-lg) 0 var(--space-sm);
+      padding-bottom: var(--space-xs);
+      border-bottom: 2px solid var(--gris-clair);
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p, ul { margin-bottom: var(--space-sm); }
+    ul { padding-left: var(--space-md); }
+    li { margin-bottom: var(--space-xs); }
+
+    .container strong { color: var(--noir); }
+
+    .container a { color: var(--bleu-canard); }
+    .container a:visited { color: var(--bleu-canard); }
+
+    .footer {
+      text-align: center;
+      padding: var(--space-xl) var(--space-md);
+      background: var(--noir);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: var(--fs-small);
+    }
+
+    .footer-brand {
+      font-family: var(--font-display);
+      font-style: italic;
+      letter-spacing: 0.02em;
+      display: block;
+      font-size: var(--fs-h4);
+      font-weight: 400;
+      color: var(--blanc);
+      text-decoration: none;
+    }
+
+    .footer-brand:visited { color: var(--blanc); }
+    .footer-brand:hover { opacity: 0.85; }
+
+    .footer-brand .tm {
+      font-size: 0.236em; /* golden ratio triple minor (1/phi³) */
+      vertical-align: super;
+      font-weight: 400;
+    }
+
+    .footer-baseline {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 1);
+      text-decoration: none;
+      transition: color 0.2s var(--enso);
+    }
+
+    .footer-links a:hover { color: var(--bleu-light); }
+    .footer-links a:focus-visible { color: var(--bleu-light); outline-color: rgba(255, 255, 255, 0.9); }
+
+    *:focus-visible {
+      outline: 3px solid var(--bleu-canard);
+      outline-offset: 2px;
+    }
+
+
+    @media (pointer: coarse) {
+      .btn, .footer a {
+        min-height: 44px;
+        min-width: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    *:focus:not(:focus-visible) {
+      outline: none;
+    }
+    /* OVERRIDE Systeme.io : alignement à gauche du CONTENU (header et footer restent centrés) */
+    .container,
+    .container p,
+    .container h2,
+    .container h3,
+    .container h4,
+    .container ul,
+    .container li,
+    .notice-48h,
+    .notice-72h-reminder,
+    .onboarding-title,
+    .section-divider,
+    .section-title,
+    .section-subtitle,
+    .discovery-card,
+    .discovery-card__title,
+    .discovery-card__lead,
+    .discovery-card__closing,
+    .discovery-card__closing-note,
+    .discovery-card__note,
+    .discovery-card__badge,
+    .affiliation-cta,
+    .affiliation-cta h2,
+    .affiliation-cta p,
+    .book-section,
+    .book-section h2,
+    .book-section p,
+    .cta-section,
+    .cta-section .cta-note,
+    .conditions-section,
+    .conditions-section h2,
+    .advantage-card,
+    .steps-section,
+    .step,
+    .demo-cta,
+    .demo-cta p,
+    .general-contact,
+    .company-info,
+    .rgpd-box,
+    .rgpd-box h3,
+    .rgpd-box p,
+    .resource-card,
+    main { text-align: left; }
+    /* Le footer et les boutons centrés gardent leur alignement original */
+    .footer, .footer-links, .footer-baseline { text-align: center; }
+    /* Conteneurs flex/grid : on garde le layout d'origine, on aligne juste le texte */
+    .discovery-card__items { margin-left: 0; }
+    .discovery-card__lead { margin-left: 0; margin-right: 0; }
+    .book-section img { display: block; margin-left: 0; margin-right: auto; }
+    .affiliation-cta p { margin-left: 0; margin-right: 0; }
+    .book-section p { margin-left: 0; margin-right: 0; }
+    .demo-cta p { margin-left: 0; margin-right: 0; }
+
+  </style>
+  <!-- /SYSTEME.IO BLOCK -->
+</head>
+
+<header class="page-header">
+    <a href="/home">
+      &larr; Retour à <strong style="font-family:'DM Serif Display', Georgia, serif; font-style:italic; font-weight:400;">Qalia<sup style="font-size: 0.6em; font-weight: 400;">TM</sup></strong>
+    </a>
+    <h1>Mentions légales</h1>
+    <p style="color: rgba(255,255,255,0.95); font-size: var(--fs-body); margin-top: var(--space-2xs);">Partagé. Pas remplacé.</p>
+  </header>
+
+  <main id="main-content">
+  <div class="container">
+
+    <h2>1. Éditeur du site</h2>
+    <p>
+      <strong>SAS DARIOT Romuald</strong><br>
+      Société par actions simplifiée unipersonnelle au capital de 100,00 €<br>
+      Siège social : 231 rue Saint-Honoré, 75001 Paris, France<br>
+      SIREN : 849 107 826<br>
+      SIRET : 849 107 826 00018<br>
+      N° TVA intracommunautaire : FR88849107826<br>
+      Date de création : 14 mars 2019
+    </p>
+
+    <h2>2. Directeur de la publication</h2>
+    <p>Romuald DARIOT, en qualité de représentant légal de SAS DARIOT Romuald.</p>
+
+    <h2>3. Hébergeur</h2>
+    <p>
+      <strong>Systeme.io</strong><br>
+      Systeme.io SAS<br>
+      14 bis rue Desnouettes, 75015 Paris, France<br>
+      Site web : <a href="https://systeme.io" target="_blank" rel="nofollow noopener" title="Ouvre dans un nouvel onglet">systeme.io</a>
+    </p>
+
+    <h2>4. Propriété intellectuelle</h2>
+    <p>
+      L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes,
+      structure) est la propriété exclusive de SAS DARIOT Romuald ou de ses partenaires.
+      Toute reproduction, représentation, modification, publication ou adaptation
+      de tout ou partie des éléments du site, quel que soit le moyen ou le procédé
+      utilisé, est interdite sauf autorisation écrite préalable de SAS DARIOT Romuald.
+    </p>
+    <p>
+      Qalia est une marque de SAS DARIOT Romuald. Toute utilisation non autorisée de cette
+      marque est strictement interdite.
+    </p>
+
+    <h2>5. Données personnelles et RGPD</h2>
+    <p>
+      Conformément au Règlement Général sur la Protection des Données (RGPD)
+      et à la loi Informatique et Libertés, SAS DARIOT Romuald s'engage à protéger
+      les données personnelles des utilisateurs de ce site.
+    </p>
+    <p><strong>Données collectées :</strong></p>
+    <ul>
+      <li>Données de contact professionnel (nom, prénom, email professionnel, téléphone)</li>
+      <li>Données de facturation (raison sociale, SIRET, adresse)</li>
+      <li>Données de navigation (cookies techniques)</li>
+    </ul>
+    <p><strong>Base légale :</strong> intérêt légitime (relation B2B) et exécution contractuelle.</p>
+    <p><strong>Durée de conservation :</strong> les données sont conservées pendant la durée de la relation commerciale et 3 ans après la fin de celle-ci, conformément aux obligations légales.</p>
+    <p><strong>Vos droits :</strong> vous disposez d'un droit d'accès, de rectification, de suppression, de limitation, de portabilité et d'opposition sur vos données personnelles. Pour exercer ces droits, contactez-nous à l'adresse indiquée ci-dessous.</p>
+    <p><strong>Responsable du traitement :</strong> SAS DARIOT Romuald, 231 rue Saint-Honoré, 75001 Paris.</p>
+    <div style="display:flex; align-items:center; gap:14px; margin:16px 0;">
+      <img src="https://cdn.jsdelivr.net/gh/Agencyrungo/qalia-cdn/Assets/romuald-dariot.webp" alt="Romuald DARIOT, DPO" width="56" height="56" style="border-radius:12px; object-fit:cover;" loading="lazy">
+      <p style="margin:0;"><strong>D&eacute;l&eacute;gu&eacute; &agrave; la protection des donn&eacute;es (DPO) :</strong> Romuald DARIOT, joignable &agrave; <a href="mailto:bonjour@qalia.ai" style="color: #1B7E94;">bonjour@qalia.ai</a>.</p>
+    </div>
+    <p><strong>Sous-traitant technique :</strong> le service Qalia est déployé sur la plateforme ChatGPT, éditée par OpenAI, Inc. (San Francisco, États-Unis). Les données saisies dans les conversations avec Qalia transitent par les serveurs d'OpenAI. Aucune donnée n'est hébergée par Rungo. Pour en savoir plus sur le traitement des données par OpenAI, consultez leur <a href="https://openai.com/policies/privacy-policy" style="color: var(--bleu-canard);" target="_blank" rel="nofollow noopener" title="Ouvre dans un nouvel onglet">politique de confidentialité</a>. Conformément à l'article 12.3 de nos <a href="/cgv" style="color: var(--bleu-canard);" target="_blank" rel="noopener">CGV</a>, ces transferts sont encadrés par les clauses contractuelles types (SCC) de la Commission européenne.</p>
+    <p style="margin-top: var(--space-sm);"><strong>Pour en savoir plus :</strong> consultez notre <a href="/politique-confidentialite" style="color: var(--bleu-canard);" target="_blank" rel="noopener">politique de confidentialité complète</a>.</p>
+
+    <h2>6. Cookies</h2>
+    <p>
+      Ce site utilise des cookies strictement nécessaires au fonctionnement technique
+      du site. Aucun cookie publicitaire ou de tracking tiers n'est utilisé.
+    </p>
+    <p>
+      Les cookies techniques permettent de mémoriser vos préférences de navigation
+      et d'assurer le bon fonctionnement du site. Ils ne nécessitent pas de
+      consentement préalable conformément à la réglementation en vigueur.
+    </p>
+    <p style="margin-top: var(--space-xs);"><strong>Pour en savoir plus :</strong> consultez notre <a href="/cookies" style="color: var(--bleu-canard);" target="_blank" rel="noopener">politique de cookies</a>.</p>
+
+    <h2>7. Limitation de responsabilité</h2>
+    <p>
+      SAS DARIOT Romuald s'efforce de fournir des informations exactes et à jour sur ce site.
+      Toutefois, elle ne peut garantir l'exactitude, la complétude ou l'actualité
+      des informations diffusées. SAS DARIOT Romuald décline toute responsabilité pour
+      tout dommage résultant de l'utilisation des informations contenues sur ce site.
+    </p>
+
+    <h2>8. Droit applicable et juridiction</h2>
+    <p>
+      Le présent site et ses mentions légales sont régis par le droit français.
+      En cas de litige, et après tentative de médiation amiable, le tribunal
+      compétent sera celui de <strong>La Réunion</strong>.
+    </p>
+
+    <h2>9. Crédits</h2>
+    <p>
+      Conception et r&eacute;alisation&nbsp;: Rungo, &eacute;dit&eacute; par SAS DARIOT Romuald.<br>
+      Fondateurs&nbsp;: Romuald DARIOT et Mehdi IDRICI.
+    </p>
+
+  </div>
+  </main>
+
+  <footer class="footer">
+    <a href="/home" class="footer-brand">Qalia<sup class="tm">TM</sup></a>
+    <p class="footer-baseline">&Eacute;dit&eacute; par Rungo</p>
+    <nav class="footer-links" aria-label="Pied de page">
+      <span aria-current="page" style="color: var(--bleu-light); font-weight: 600;">Mentions légales</span>
+      <a href="/cgv" target="_blank" rel="noopener">CGV</a>
+      <a href="/politique-confidentialite" target="_blank" rel="noopener">Confidentialité</a>
+      <a href="/cookies" target="_blank" rel="noopener">Cookies</a>
+      <a href="/contact" target="_blank" rel="noopener">Contact</a>
+    </nav>
+    <p>&copy; 2026 SAS DARIOT Romuald. Tous droits r&eacute;serv&eacute;s.</p>
+  </footer>
