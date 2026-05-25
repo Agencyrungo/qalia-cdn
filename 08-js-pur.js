@@ -1,4 +1,4 @@
-    // ============================================
+// ============================================
     // PATCH RUNTIME 2026-04-27 : corrections HTML applicables au runtime
     // Permet de corriger le HTML servi par Systeme.io sans re-injection manuelle.
     // Couvre : footer URLs absolues, GPT-4o, Marque Reunion retiree,
@@ -984,7 +984,7 @@
             detailsEl.className = 'sim-roi-details';
             var summaryEl = document.createElement('summary');
             summaryEl.textContent = 'R\u00e9sultat net cumul\u00e9 mois par mois (gains \u2212 investissement)';
-            summaryEl.style.cssText = 'cursor:pointer; font-weight:600; padding:var(--space-xs) 0; color:var(--bleu-canard);';
+            summaryEl.style.cssText = 'cursor:pointer; font-weight:600; padding:var(--space-xs) 0; color: var(--brand-text);';
             detailsEl.appendChild(summaryEl);
             detailsEl.appendChild(roiChartCard);
             roiChartWrap.appendChild(detailsEl);
@@ -1036,7 +1036,7 @@
           if (!o) return;
           var items = o.items.slice(0, 4);
           items.forEach(function(item) {
-            html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:3px 8px; border:1px solid rgba(27,126,148,0.2); border-radius:20px; color:var(--bleu-canard); background:rgba(27,126,148,0.05);">' + item + '</span>';
+            html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:3px 8px; border:1px solid rgba(27,126,148,0.2); border-radius: 1.5rem; color: var(--brand-text); background:rgba(27,126,148,0.05);">' + item + '</span>';
           });
           if (o.items.length > 4) {
             html += '<span style="font-size:var(--fs-caption); color:var(--gris);">+\u00a0' + (o.items.length - 4) + ' livrables</span>';
@@ -1069,7 +1069,7 @@
         html += '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bleu-canard)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>';
         html += '<span style="font-size:var(--fs-h4); font-weight:700; color:var(--noir);">D\u00e9couvrez Qalia d\u00e8s l\u2019activation</span>';
         html += '</div>';
-        html += '<p style="font-size:var(--fs-body); color:var(--gris); line-height:var(--lh-body); max-width:560px; margin:0 auto var(--space-md);">D\u00e8s votre licence activ\u00e9e, deux tutoriels complets vous accompagnent pour vos premiers pas dans Qalia (<a href="https://www.qalia.ai/tutos-qalia" target="_blank" rel="noopener" style="color:var(--bleu-canard); font-weight:600; text-decoration:underline; text-underline-offset:2px;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none" style="vertical-align:middle; margin-right:3px;" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.716 29.2178L2.27664 24.9331C1.44913 23.9023 1 22.6346 1 21.3299V5.81499C1 3.86064 2.56359 2.23897 4.58071 2.10125L20.5321 1.01218C21.691 0.933062 22.8428 1.24109 23.7948 1.8847L29.3992 5.67391C30.4025 6.35219 31 7.46099 31 8.64426V26.2832C31 28.1958 29.4626 29.7793 27.4876 29.9009L9.78333 30.9907C8.20733 31.0877 6.68399 30.4237 5.716 29.2178Z" fill="currentColor"/><path d="M11.2481 13.5787V13.3756C11.2481 12.8607 11.6605 12.4337 12.192 12.3982L16.0633 12.1397L21.417 20.0235V13.1041L20.039 12.9204V12.824C20.039 12.303 20.4608 11.8732 20.9991 11.8456L24.5216 11.6652V12.1721C24.5216 12.41 24.3446 12.6136 24.1021 12.6546L23.2544 12.798V24.0037L22.1906 24.3695C21.3018 24.6752 20.3124 24.348 19.8036 23.5803L14.6061 15.7372V23.223L16.2058 23.5291L16.1836 23.6775C16.1137 24.1423 15.7124 24.4939 15.227 24.5155L11.2481 24.6926C11.1955 24.1927 11.5701 23.7456 12.0869 23.6913L12.6103 23.6363V13.6552L11.2481 13.5787Z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.6749 2.96678L4.72347 4.05585C3.76799 4.12109 3.02734 4.88925 3.02734 5.81499V21.3299C3.02734 22.1997 3.32676 23.0448 3.87843 23.7321L7.3178 28.0167C7.87388 28.7094 8.74899 29.0909 9.65435 29.0352L27.3586 27.9454C28.266 27.8895 28.9724 27.1619 28.9724 26.2832V8.64426C28.9724 8.10059 28.6979 7.59115 28.2369 7.27951L22.6325 3.49029C22.0613 3.10413 21.3702 2.91931 20.6749 2.96678ZM5.51447 6.057C5.29261 5.89274 5.3982 5.55055 5.6769 5.53056L20.7822 4.44711C21.2635 4.41259 21.7417 4.54512 22.1309 4.82088L25.1617 6.96813C25.2767 7.04965 25.2228 7.22563 25.0803 7.23338L9.08387 8.10336C8.59977 8.12969 8.12193 7.98747 7.73701 7.7025L5.51447 6.057ZM8.33357 10.8307C8.33357 10.311 8.75341 9.88177 9.29027 9.85253L26.203 8.93145C26.7263 8.90296 27.1667 9.30534 27.1667 9.81182V25.0853C27.1667 25.604 26.7484 26.0328 26.2126 26.0633L9.40688 27.0195C8.8246 27.0527 8.33357 26.6052 8.33357 26.0415V10.8307Z" fill="currentColor"/></svg> acc\u00e8s libre, sans inscription</a>). Voici ce que Qalia g\u00e9n\u00e8re pour vous\u00a0:</p>';
+        html += '<p style="font-size:var(--fs-body); color:var(--gris); line-height:var(--lh-body); max-width:560px; margin:0 auto var(--space-md);">D\u00e8s votre licence activ\u00e9e, deux tutoriels complets vous accompagnent pour vos premiers pas dans Qalia (<a href="https://www.qalia.ai/tutos-qalia" target="_blank" rel="noopener" style="color: var(--brand-text); font-weight:600; text-decoration:underline; text-underline-offset:2px;"><svg width="16" height="16" viewBox="0 0 32 32" fill="none" style="vertical-align:middle; margin-right:3px;" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.716 29.2178L2.27664 24.9331C1.44913 23.9023 1 22.6346 1 21.3299V5.81499C1 3.86064 2.56359 2.23897 4.58071 2.10125L20.5321 1.01218C21.691 0.933062 22.8428 1.24109 23.7948 1.8847L29.3992 5.67391C30.4025 6.35219 31 7.46099 31 8.64426V26.2832C31 28.1958 29.4626 29.7793 27.4876 29.9009L9.78333 30.9907C8.20733 31.0877 6.68399 30.4237 5.716 29.2178Z" fill="currentColor"/><path d="M11.2481 13.5787V13.3756C11.2481 12.8607 11.6605 12.4337 12.192 12.3982L16.0633 12.1397L21.417 20.0235V13.1041L20.039 12.9204V12.824C20.039 12.303 20.4608 11.8732 20.9991 11.8456L24.5216 11.6652V12.1721C24.5216 12.41 24.3446 12.6136 24.1021 12.6546L23.2544 12.798V24.0037L22.1906 24.3695C21.3018 24.6752 20.3124 24.348 19.8036 23.5803L14.6061 15.7372V23.223L16.2058 23.5291L16.1836 23.6775C16.1137 24.1423 15.7124 24.4939 15.227 24.5155L11.2481 24.6926C11.1955 24.1927 11.5701 23.7456 12.0869 23.6913L12.6103 23.6363V13.6552L11.2481 13.5787Z" fill="#fff"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.6749 2.96678L4.72347 4.05585C3.76799 4.12109 3.02734 4.88925 3.02734 5.81499V21.3299C3.02734 22.1997 3.32676 23.0448 3.87843 23.7321L7.3178 28.0167C7.87388 28.7094 8.74899 29.0909 9.65435 29.0352L27.3586 27.9454C28.266 27.8895 28.9724 27.1619 28.9724 26.2832V8.64426C28.9724 8.10059 28.6979 7.59115 28.2369 7.27951L22.6325 3.49029C22.0613 3.10413 21.3702 2.91931 20.6749 2.96678ZM5.51447 6.057C5.29261 5.89274 5.3982 5.55055 5.6769 5.53056L20.7822 4.44711C21.2635 4.41259 21.7417 4.54512 22.1309 4.82088L25.1617 6.96813C25.2767 7.04965 25.2228 7.22563 25.0803 7.23338L9.08387 8.10336C8.59977 8.12969 8.12193 7.98747 7.73701 7.7025L5.51447 6.057ZM8.33357 10.8307C8.33357 10.311 8.75341 9.88177 9.29027 9.85253L26.203 8.93145C26.7263 8.90296 27.1667 9.30534 27.1667 9.81182V25.0853C27.1667 25.604 26.7484 26.0328 26.2126 26.0633L9.40688 27.0195C8.8246 27.0527 8.33357 26.6052 8.33357 26.0415V10.8307Z" fill="currentColor"/></svg> acc\u00e8s libre, sans inscription</a>). Voici ce que Qalia g\u00e9n\u00e8re pour vous\u00a0:</p>';
         // D42 : affichage adaptatif par segment (A=solo, C=gestionnaire)
         var cible = state.cible || 'formateur';
         if (state.cibles && state.cibles.length > 1) {
@@ -1089,7 +1089,7 @@
           var o = ACTIVATION_OUTPUTS[cat];
           if (!o) return;
           if (cats.length > 1) {
-            html += '<p style="font-size:var(--fs-small); font-weight:700; color:var(--bleu-canard); margin:var(--space-sm) 0 var(--space-2xs); text-transform:uppercase; letter-spacing:0.05em;">' + o.titre + '</p>';
+            html += '<p style="font-size:var(--fs-small); font-weight:700; color: var(--brand-text); margin:var(--space-sm) 0 var(--space-2xs); text-transform:uppercase; letter-spacing:0.05em;">' + o.titre + '</p>';
           }
           // Séparer pills actives et disponibles (gestionnaire mode C)
           var activePills = [];
@@ -1103,14 +1103,14 @@
           });
           html += '<div style="display:flex; flex-wrap:wrap; gap:var(--space-2xs); justify-content:center; margin-bottom:' + (availablePills.length > 0 ? 'var(--space-3xs)' : 'var(--space-xs)') + ';">';
           activePills.forEach(function(item) {
-            html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:4px 10px; border:1px solid rgba(27,126,148,0.2); border-radius:20px; color:var(--bleu-canard); background:rgba(27,126,148,0.05);">' + item + '</span>';
+            html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:4px 10px; border:1px solid rgba(27,126,148,0.2); border-radius: 1.5rem; color: var(--brand-text); background:rgba(27,126,148,0.05);">' + item + '</span>';
           });
           html += '</div>';
           if (availablePills.length > 0) {
             html += '<p style="font-size:10px; color:var(--gris); text-transform:uppercase; letter-spacing:0.05em; margin:var(--space-3xs) 0 var(--space-3xs); text-align:center;">\u00c9galement disponible</p>';
             html += '<div style="display:flex; flex-wrap:wrap; gap:var(--space-2xs); justify-content:center; margin-bottom:var(--space-xs);">';
             availablePills.forEach(function(item) {
-              html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:4px 10px; border:1px solid rgba(27,126,148,0.12); border-radius:20px; color:var(--bleu-canard); background:rgba(27,126,148,0.02); opacity:0.55; font-style:italic;">' + item + '</span>';
+              html += '<span class="output-pill" style="font-size:var(--fs-caption); padding:4px 10px; border:1px solid rgba(27,126,148,0.12); border-radius: 1.5rem; color: var(--brand-text); background:rgba(27,126,148,0.02); opacity:0.55; font-style:italic;">' + item + '</span>';
             });
             html += '</div>';
           }
@@ -1120,7 +1120,7 @@
         cats.forEach(function(cat) {
           var o = ACTIVATION_OUTPUTS[cat];
           if (!o) return;
-          html += '<a href="#productions" onclick="(function(c){setTimeout(function(){var t=document.querySelector(\'.cat-tab[data-cat=&quot;\'+c+\'&quot;]\');if(t){t.click();}},300);})('+cat+'); return true;" style="display:inline-flex; align-items:center; gap:var(--space-2xs); font-size:var(--fs-small); color:var(--bleu-canard); font-weight:600; text-decoration:none; border:1px solid rgba(27,126,148,0.25); padding:var(--space-2xs) var(--space-sm); border-radius:0.5rem; transition:background 0.2s;" onmouseover="this.style.background=\'rgba(27,126,148,0.06)\'" onmouseout="this.style.background=\'transparent\'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg> Voir le d\u00e9tail ' + o.titre + '</a>';
+          html += '<a href="#productions" onclick="(function(c){setTimeout(function(){var t=document.querySelector(\'.cat-tab[data-cat=&quot;\'+c+\'&quot;]\');if(t){t.click();}},300);})('+cat+'); return true;" style="display:inline-flex; align-items:center; gap:var(--space-2xs); font-size:var(--fs-small); color: var(--brand-text); font-weight:600; text-decoration:none; border:1px solid rgba(27,126,148,0.25); padding:var(--space-2xs) var(--space-sm); border-radius:0.5rem; transition:background 0.2s;" onmouseover="this.style.background=\'rgba(27,126,148,0.06)\'" onmouseout="this.style.background=\'transparent\'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg> Voir le d\u00e9tail ' + o.titre + '</a>';
         });
         html += '</div>';
         html += '<p style="display:flex; align-items:center; justify-content:center; gap:var(--space-2xs); font-size:var(--fs-caption); color:var(--gris); margin-top:var(--space-sm);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--bleu-canard)" stroke-width="2" style="flex-shrink:0;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Chaque document porte la mention \u00ab\u00a0G\u00e9n\u00e9r\u00e9 avec l\u2019assistance de Qalia\u00a0\u00bb \u2013 tra\u00e7abilit\u00e9 IA Act</p>';
@@ -1849,9 +1849,9 @@
           var avgHint = avgRole ? ' <span style="color:var(--gris); font-size:var(--fs-caption);" title="Moyenne secteur formation (source\u00a0: Panorama branche 2024)">moy.\u00a0' + avgRole + '</span>' : '';
           html += '<div style="display:flex; align-items:center; gap:var(--space-xs); margin-bottom:var(--space-2xs);">'
             + '<span style="font-size:var(--fs-small); flex:1; color:var(--noir);">' + label + avgHint + '</span>'
-            + '<button class="sim-etp-minus" data-role="' + role + '" style="width:32px; height:32px; border:1px solid var(--gris-clair); border-radius:0.75rem; background:#fff; cursor:pointer; font-size:var(--fs-body); line-height:1; flex-shrink:0;">\u2212</button>'
-            + '<input type="number" class="sim-etp-input" data-role="' + role + '" value="' + count + '" min="1" max="' + maxRole + '" style="width:52px; text-align:center; font-size:var(--fs-body); font-weight:700; color:var(--bleu-canard); border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; -moz-appearance:textfield; appearance:textfield; flex-shrink:0;">'
-            + '<button class="sim-etp-plus" data-role="' + role + '" style="width:32px; height:32px; border:1px solid var(--gris-clair); border-radius:0.75rem; background:#fff; cursor:pointer; font-size:var(--fs-body); line-height:1; flex-shrink:0;">+</button>'
+            + '<button class="sim-etp-minus" data-role="' + role + '" style="width:32px; height:32px; border:1px solid var(--gris-clair); border-radius:0.75rem; background:var(--blanc); cursor:pointer; font-size:var(--fs-body); line-height:1; flex-shrink:0;">\u2212</button>'
+            + '<input type="number" class="sim-etp-input" data-role="' + role + '" value="' + count + '" min="1" max="' + maxRole + '" style="width:52px; text-align:center; font-size:var(--fs-body); font-weight:700; color: var(--brand-text); border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; -moz-appearance:textfield; appearance:textfield; flex-shrink:0;">'
+            + '<button class="sim-etp-plus" data-role="' + role + '" style="width:32px; height:32px; border:1px solid var(--gris-clair); border-radius:0.75rem; background:var(--blanc); cursor:pointer; font-size:var(--fs-body); line-height:1; flex-shrink:0;">+</button>'
             + '</div>';
         });
         container.innerHTML = html;
@@ -2063,7 +2063,7 @@
           html += '<div style="display:flex; align-items:center; gap:var(--space-xs); margin-bottom:var(--space-2xs);">'
             + '<span style="font-size:var(--fs-small); min-width:120px; color:var(--noir);">' + label + '</span>'
             + '<input type="range" class="sim-slider sim-team-role-slider" data-role="' + role + '" min="0" max="' + total + '" value="' + count + '" step="1" style="flex:1; height:6px;">'
-            + '<span class="sim-team-role-count" data-role="' + role + '" style="font-size:var(--fs-small); font-weight:700; color:var(--bleu-canard); min-width:24px; text-align:right;">' + count + '</span>'
+            + '<span class="sim-team-role-count" data-role="' + role + '" style="font-size:var(--fs-small); font-weight:700; color: var(--brand-text); min-width:24px; text-align:right;">' + count + '</span>'
             + '</div>';
         });
         html += '<div style="font-size:var(--fs-small); color:var(--gris); margin-top:var(--space-2xs);" id="simTeamBreakdownTotal">Total\u00a0: ' + fmtNum(total) + '</div>';
@@ -2371,21 +2371,21 @@
           }
           var card = document.createElement('div');
           card.className = 'sim-task-card';
-          card.style.cssText = 'padding:var(--space-sm); margin-bottom:var(--space-xs); background:var(--blanc-casse); border-radius:10px; border:1px solid var(--gris-clair);';
+          card.style.cssText = 'padding:var(--space-sm); margin-bottom:var(--space-xs); background:var(--blanc-casse); border-radius: 0.75rem; border:1px solid var(--gris-clair);';
           card.innerHTML = '<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-2xs); gap:var(--space-sm);">'
             + '<label style="font-size:var(--fs-small); font-weight:600; color:var(--noir); display:flex; align-items:center; gap:var(--space-2xs); white-space:nowrap; flex-shrink:0;">'
-            + '<input type="checkbox" checked data-task="' + key + '" style="accent-color:var(--bleu-canard);">'
+            + '<input type="checkbox" checked data-task="' + key + '" style="accent-color: var(--brand-text);">'
             + t.label + tooltipHtml + '</label>'
             + badgesHtml
             + '</div>'
             + '<div class="sim-task-grid">'
             + '<span><input type="number" class="sim-task-vol" data-task="' + key + '" value="' + vol + '" min="1" max="' + volMax + '" '
-            + 'style="width:60px; text-align:center; border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; font-size:var(--fs-small); font-weight:600; color:var(--bleu-canard);">'
+            + 'style="width:60px; text-align:center; border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; font-size:var(--fs-small); font-weight:600; color: var(--brand-text);">'
             + freqUnit + '</span>'
             + '<span>Sans IA\u00a0: <input type="number" class="sim-task-market" data-task="' + key + '" value="' + (state.taskMarketHours[key] || t.marketHours) + '" min="0.5" max="200" step="0.5" '
-            + 'style="width:60px; text-align:center; border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; font-size:var(--fs-small); font-weight:600; color:var(--bordeaux);">'
+            + 'style="width:60px; text-align:center; border:1px solid var(--gris-clair); border-radius:0.75rem; padding:2px 4px; font-size:var(--fs-small); font-weight:600; color: var(--brand-accent-text);">'
             + fH('</span>')
-            + '<span>Qalia\u00a0: <strong style="color:var(--bleu-canard);">' + fmtH(t.qaliaHours) + fH('</strong></span>')
+            + '<span>Qalia\u00a0: <strong style="color: var(--brand-text);">' + fmtH(t.qaliaHours) + fH('</strong></span>')
             + '<span style="color:var(--succes); font-weight:600;">' + fmtGain(gain) + fH('/an</span>')
             + '</div>';
           parent.appendChild(card);
@@ -2394,7 +2394,7 @@
         // Helper : render a section header
         function renderSectionHeader(text, parent) {
           var h = document.createElement('div');
-          h.style.cssText = 'font-size:var(--fs-caption); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--bleu-canard); margin:var(--space-sm) 0 var(--space-2xs); padding-bottom:var(--space-3xs); border-bottom:1px solid rgba(27,126,148,0.15);';
+          h.style.cssText = 'font-size:var(--fs-caption); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color: var(--brand-text); margin:var(--space-sm) 0 var(--space-2xs); padding-bottom:var(--space-3xs); border-bottom:1px solid rgba(27,126,148,0.15);';
           h.textContent = text;
           parent.appendChild(h);
         }
@@ -2446,7 +2446,7 @@
         // 2. Afficher les FREQUENT avec volume résiduel
         if (frequentKeys.length > 0) {
           var freqHeader = document.createElement('div');
-          freqHeader.style.cssText = 'font-size:var(--fs-caption); font-weight:600; color:var(--bleu-canard); margin-bottom:var(--space-2xs); opacity:0.8;';
+          freqHeader.style.cssText = 'font-size:var(--fs-caption); font-weight:600; color: var(--brand-text); margin-bottom:var(--space-2xs); opacity:0.8;';
           freqHeader.textContent = 'T\u00e2ches fr\u00e9quentes de vos profils';
           advDiv.appendChild(freqHeader);
         }
@@ -2481,7 +2481,7 @@
           var span = document.createElement('span');
           span.innerHTML = t.label + ' (' + t.marketHours + fH(' \u2192 ') + t.qaliaHours + fH(')');
           if (displayVol > 0) {
-            span.innerHTML += ' <em style="color:var(--bleu-canard); font-size:0.85em;">\u2248' + fmtNum(displayVol) + '/an r\u00e9siduel</em>';
+            span.innerHTML += ' <em style="color: var(--brand-text); font-size:0.85em;">\u2248' + fmtNum(displayVol) + '/an r\u00e9siduel</em>';
           } else {
             span.innerHTML += ' <em style="color:var(--gris); font-size:0.85em;">couvert par vos t\u00e2ches principales</em>';
           }
@@ -2591,8 +2591,8 @@
         if (!summaryDiv) return;
         var gain = Math.round(result.totalMarket - result.totalQalia);
         summaryDiv.innerHTML = '<div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs);">'
-          + '<span>Total actuel : <strong style="color:var(--bordeaux);">' + fmtH(result.totalMarket) + fH('/an</strong></span>')
-          + '<span>Total Qalia : <strong style="color:var(--bleu-canard);">' + fmtH(result.totalQalia) + fH('/an</strong></span>')
+          + '<span>Total actuel : <strong style="color: var(--brand-accent-text);">' + fmtH(result.totalMarket) + fH('/an</strong></span>')
+          + '<span>Total Qalia : <strong style="color: var(--brand-text);">' + fmtH(result.totalQalia) + fH('/an</strong></span>')
           + '<span style="color:var(--succes); font-weight:700;">' + fmtGain(gain) + fH(' lib\u00e9r\u00e9es/an</span>')
           + '</div>';
       }
@@ -2643,7 +2643,7 @@
           html += '<div style="display:flex; align-items:center; gap:var(--space-xs); margin-bottom:var(--space-2xs);">'
             + '<span style="font-size:var(--fs-small); min-width:140px; color:var(--noir);">' + label + '</span>'
             + '<input type="number" class="sim-tjm-role-input" data-role="' + role + '" value="' + val + '" min="20" max="500" step="5" '
-            + 'style="width:70px; text-align:center; font-size:var(--fs-body); font-weight:700; color:var(--bleu-canard); border:1px solid var(--gris-clair); border-radius:0.75rem; padding:4px 6px; -moz-appearance:textfield; appearance:textfield;">'
+            + 'style="width:70px; text-align:center; font-size:var(--fs-body); font-weight:700; color: var(--brand-text); border:1px solid var(--gris-clair); border-radius:0.75rem; padding:4px 6px; -moz-appearance:textfield; appearance:textfield;">'
             + '<span style="font-size:var(--fs-small); color:var(--gris);"><sup class="u">\u20ac</sup><span class="u">/h</span></span>'
             + '</div>';
         });
@@ -2936,23 +2936,23 @@
         var _thP = 'padding:var(--space-xs) var(--space-xs) var(--space-3xs);text-align:center;font-weight:700;border-radius:8px 8px 0 0;';
 
         compEl.innerHTML = '<div style="margin:var(--space-md) 0;padding:var(--space-sm);background:var(--blanc-casse);border-radius:12px;border:1px solid var(--gris-clair);">'
-          + '<div style="font-size:var(--fs-caption);font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--bleu-canard);margin-bottom:var(--space-xs);">Comparaison des solutions</div>'
+          + '<div style="font-size:var(--fs-caption);font-weight:700;text-transform:uppercase;letter-spacing:.05em;color: var(--brand-text);margin-bottom:var(--space-xs);">Comparaison des solutions</div>'
           + '<table style="width:100%;border-collapse:separate;border-spacing:0;font-size:var(--fs-small);">'
           + '<thead><tr>'
           + '<th style="text-align:left;padding:var(--space-xs);"></th>'
-          + '<th class="sim-cmp-th sim-cmp-b" style="' + _thP + 'color:var(--bordeaux);background-color:rgba(147,41,81,.05);">Sans assistance IA</th>'
+          + '<th class="sim-cmp-th sim-cmp-b" style="' + _thP + 'color: var(--brand-accent-text);background-color:rgba(147,41,81,.05);">Sans assistance IA</th>'
           + '<th class="sim-cmp-th sim-cmp-e" style="' + _thP + 'color:#C94040;background-color:rgba(201,64,64,.05);">IA g\u00e9n\u00e9raliste</th>'
-          + '<th class="sim-cmp-th sim-cmp-q" style="' + _thP + 'color:var(--bleu-canard);background-color:rgba(27,126,148,.06);">Qalia</th>'
+          + '<th class="sim-cmp-th sim-cmp-q" style="' + _thP + 'color: var(--brand-text);background-color:rgba(27,126,148,.06);">Qalia</th>'
           + '</tr></thead><tbody>'
           + '<tr class="sim-cmp-tr">'
           + '<td style="padding:var(--space-2xs) var(--space-xs);font-weight:600;color:var(--noir);">Heures/an</td>'
-          + '<td class="sim-cmp-td sim-cmp-tb" style="' + _tdP + 'color:var(--bordeaux);background:rgba(147,41,81,.05);">' + fN(Math.round(totalOldH)) + '\u00a0h</td>'
+          + '<td class="sim-cmp-td sim-cmp-tb" style="' + _tdP + 'color: var(--brand-accent-text);background:rgba(147,41,81,.05);">' + fN(Math.round(totalOldH)) + '\u00a0h</td>'
           + '<td class="sim-cmp-td sim-cmp-te" style="' + _tdP + 'color:#C94040;background:rgba(201,64,64,.05);">' + fN(Math.round(chatH)) + '\u00a0h\u00a0<em style="font-size:.8em;opacity:.7;">(-' + (100 - pctChat) + '%)</em></td>'
-          + '<td class="sim-cmp-td sim-cmp-tq" style="' + _tdP + 'color:var(--bleu-canard);font-weight:700;background:rgba(27,126,148,.06);">' + fN(Math.round(totalNewH)) + '\u00a0h\u00a0<em style="font-size:.8em;opacity:.7;">(-' + (100 - pctQalia) + '%)</em></td>'
+          + '<td class="sim-cmp-td sim-cmp-tq" style="' + _tdP + 'color: var(--brand-text);font-weight:700;background:rgba(27,126,148,.06);">' + fN(Math.round(totalNewH)) + '\u00a0h\u00a0<em style="font-size:.8em;opacity:.7;">(-' + (100 - pctQalia) + '%)</em></td>'
           + '</tr>'
           + '<tr class="sim-cmp-tr" style="border-bottom:none;">'
           + '<td style="padding:var(--space-2xs) var(--space-xs);font-weight:600;color:var(--noir);">Conformit\u00e9 RNQ\u00a0V9</td>'
-          + '<td class="sim-cmp-td sim-cmp-tb" style="' + _tdP + 'color:var(--bordeaux);background:rgba(147,41,81,.05);">Manuelle</td>'
+          + '<td class="sim-cmp-td sim-cmp-tb" style="' + _tdP + 'color: var(--brand-accent-text);background:rgba(147,41,81,.05);">Manuelle</td>'
           + '<td class="sim-cmp-td sim-cmp-te" style="' + _tdP + 'color:#C94040;background:rgba(201,64,64,.05);">Non structur\u00e9e</td>'
           + '<td class="sim-cmp-td sim-cmp-tq" style="' + _tdP + 'color:var(--succes);font-weight:700;background:rgba(27,126,148,.06);">Int\u00e9gr\u00e9e nativement</td>'
           + '</tr>'
@@ -3182,8 +3182,7 @@
 
         function drawBars(progress) {
           ctx.clearRect(Math.round(pad.left), Math.round(pad.top) - 1, Math.round(chartW), Math.round(chartH) + 2);
-          ctx.fillStyle = PALETTE.grisFond;
-          ctx.fillRect(Math.round(pad.left), Math.round(pad.top), Math.round(chartW), Math.round(chartH));
+          // Sprint 11 (Romuald 2026-05-12) : fond transparent pour suivre le theme actif (no fillRect)
           if (posH > 0) {
             ctx.fillStyle = 'rgba(58, 138, 106, 0.04)';
             ctx.fillRect(Math.round(pad.left), Math.round(pad.top), Math.round(chartW), Math.round(posH));
@@ -3391,7 +3390,7 @@
               if (pillX < pad.left) pillX = pad.left;
               if (pillX + lblW + 2 * pillPad > W - pad.right) pillX = W - pad.right - lblW - 2 * pillPad;
 
-              ctx.fillStyle = 'rgba(255,255,255,0.95)';
+              ctx.fillStyle = 'color-mix(in srgb, var(--blanc) 95%, transparent)';
               ctx.fillRect(pillX, pillY, lblW + 2 * pillPad, pillH);
               ctx.strokeStyle = breakColor;
               ctx.lineWidth = 1.5;
@@ -3425,7 +3424,7 @@
             var lblW = ctx.measureText(auditLbl).width;
             var lblY = Math.round(pad.top + 8);
             // Background rectangle blanc pour isoler le label des grilles
-            ctx.fillStyle = 'rgba(255,255,255,0.92)';
+            ctx.fillStyle = 'color-mix(in srgb, var(--blanc) 92%, transparent)';
             ctx.fillRect(auditXV - lblW - 8, lblY - fontSize, lblW + 6, fontSize + 4);
             ctx.fillStyle = PALETTE.bordeaux;
             ctx.fillText(auditLbl, auditXV - 4, lblY - Math.round(fontSize / 2) + 2);
@@ -3707,18 +3706,18 @@
             insightsHtml += '<div style="font-size:var(--fs-small); color:var(--noir); line-height:var(--lh-body);">';
             var roleTjm = (state.tjmByRole && state.tjmByRole[role]) ? state.tjmByRole[role] : state.tjm;
             var roleValueSaved = Math.round(roleGain * roleTjm);
-            insightsHtml += '<div>' + roleCount + ' t\u00e2ches \u00b7 <span style="color:#932951;">' + fmtH(roleMkt) + fH('</span> \u2192 <span style="color:#1B7E94;">') + fmtH(roleQal) + fH('</span></div>');
-            insightsHtml += '<div style="color:var(--succes); font-weight:600; margin-top:var(--space-2xs);">' + fmtGain(roleGain) + fH(' lib\u00e9r\u00e9es/an \u00b7 <span style="color:var(--bleu-canard);">+') + fmtNum(roleValueSaved) + '\u00a0<sup class="u">\u20ac</sup></span></div>';
+            insightsHtml += '<div>' + roleCount + ' t\u00e2ches \u00b7 <span style="color:#932951;">' + fmtH(roleMkt) + fH('</span> \u2192 <span style="color: var(--brand-text);">') + fmtH(roleQal) + fH('</span></div>');
+            insightsHtml += '<div style="color:var(--succes); font-weight:600; margin-top:var(--space-2xs);">' + fmtGain(roleGain) + fH(' lib\u00e9r\u00e9es/an \u00b7 <span style="color: var(--brand-text);">+') + fmtNum(roleValueSaved) + '\u00a0<sup class="u">\u20ac</sup></span></div>';
             insightsHtml += '</div></div>';
           });
           insightsHtml += '</div>';
           // Global summary
           var totalGainAll = Math.round((allMkt - allQal) * 10) / 10;
           var pctGainAll = allMkt > 0 ? Math.round((totalGainAll / allMkt) * 100) : 0;
-          insightsHtml += '<div style="margin-top:var(--space-xs); padding:var(--space-sm); background:rgba(27,126,148,0.06); border-radius:10px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs); font-size:var(--fs-small); font-weight:600;">';
+          insightsHtml += '<div style="margin-top:var(--space-xs); padding:var(--space-sm); background:rgba(27,126,148,0.06); border-radius: 0.75rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs); font-size:var(--fs-small); font-weight:600;">';
           var allValueSaved = Math.round(totalGainAll * state.tjm);
           insightsHtml += '<span>Total avant\u00a0: <strong style="color:#932951;">' + fmtH(allMkt) + fH('/an</strong></span>');
-          insightsHtml += '<span>Total Qalia\u00a0: <strong style="color:#1B7E94;">' + fmtH(allQal) + fH('/an</strong></span>');
+          insightsHtml += '<span>Total Qalia\u00a0: <strong style="color: var(--brand-text);">' + fmtH(allQal) + fH('/an</strong></span>');
           insightsHtml += '<span style="color:var(--succes); font-weight:700;">' + fmtGain(totalGainAll) + fH(' \u00b7 +') + fmtNum(allValueSaved) + '\u00a0<sup class="u">\u20ac</sup> (\u2212' + pctGainAll + '\u00a0<span class="u">%</span>)</span>';
           insightsHtml += '</div>';
           container.innerHTML = insightsHtml;
@@ -3767,7 +3766,7 @@
           var catQalia = 0;
           var levelMax = groupMaxVals[level];
           // Category header
-          html += '<div style="font-size:var(--fs-caption); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--bleu-canard); margin:var(--space-sm) 0 var(--space-2xs); padding-bottom:var(--space-3xs); border-bottom:1px solid rgba(27,126,148,0.15);">' + groupLabels[level] + '</div>';
+          html += '<div style="font-size:var(--fs-caption); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color: var(--brand-text); margin:var(--space-sm) 0 var(--space-2xs); padding-bottom:var(--space-3xs); border-bottom:1px solid rgba(27,126,148,0.15);">' + groupLabels[level] + '</div>';
           tasks.forEach(function(task) {
             catMarket += task.market;
             catQalia += task.qalia;
@@ -3787,24 +3786,24 @@
           // Per-category sub-total
           var catGain = Math.round((catMarket - catQalia) * 10) / 10;
           html += '<div style="font-size:var(--fs-small); color:var(--gris); text-align:right; margin-bottom:var(--space-2xs);">'
-            + '<span style="color:var(--bordeaux);">' + fmtNum(catMarket) + fH('</span>')
-            + ' \u2192 <span style="color:var(--bleu-canard);">' + fmtNum(catQalia, 1) + fH('</span>')
+            + '<span style="color: var(--brand-accent-text);">' + fmtNum(catMarket) + fH('</span>')
+            + ' \u2192 <span style="color: var(--brand-text);">' + fmtNum(catQalia, 1) + fH('</span>')
             + ' <span style="color:var(--succes); font-weight:600;">(\u2212' + fmtNum(catGain, 1) + fH(')</span></div>');
         });
 
         // Total insights (before/after summary)
         var totalGain = Math.round((totalMarketTime - totalQaliaTime) * 10) / 10;
         var pctGain = totalMarketTime > 0 ? Math.round((totalGain / totalMarketTime) * 100) : 0;
-        html += '<div style="margin-top:var(--space-sm); padding:var(--space-sm); background:rgba(27,126,148,0.06); border-radius:10px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs); font-size:var(--fs-small); font-weight:600;">';
-        html += '<span>Total avant\u00a0: <strong style="color:var(--bordeaux);">' + fmtH(totalMarketTime) + fH('/an</strong></span>');
-        html += '<span>Total Qalia\u00a0: <strong style="color:var(--bleu-canard);">' + fmtH(totalQaliaTime) + fH('/an</strong></span>');
+        html += '<div style="margin-top:var(--space-sm); padding:var(--space-sm); background:rgba(27,126,148,0.06); border-radius: 0.75rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:var(--space-xs); font-size:var(--fs-small); font-weight:600;">';
+        html += '<span>Total avant\u00a0: <strong style="color: var(--brand-accent-text);">' + fmtH(totalMarketTime) + fH('/an</strong></span>');
+        html += '<span>Total Qalia\u00a0: <strong style="color: var(--brand-text);">' + fmtH(totalQaliaTime) + fH('/an</strong></span>');
         html += '<span style="color:var(--succes); font-weight:700;">' + fmtGain(totalGain) + fH(' lib\u00e9r\u00e9es (\u2212') + pctGain + '\u00a0<span class="u">%</span>)</span>';
         html += '</div>';
         // Note relecture HITL : le temps Qalia couvre le dialogue IA ; la relecture humaine
         // obligatoire n'est pas un "coût caché" mais la valeur ajoutée du praticien réflexif (Schön).
         var relectureMin = Math.round(totalQaliaTime * 1.2);
         var relectureMax = Math.round(totalQaliaTime * 2.8);
-        html += '<p class="info-callout" style="font-size:var(--fs-caption); color:var(--gris); line-height:1.55; margin-top:var(--space-xs); padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.05); text-align:left; padding-left:var(--space-md);"><strong style="color:var(--bleu-canard);">Temps de relecture int\u00e9gr\u00e9 au calcul\u00a0:</strong> Qalia produit une premi\u00e8re version structur\u00e9e. Votre relecture p\u00e9dagogique reste indispensable\u00a0: comptez ' + fmtNum(relectureMin) + '\u00a0\u00e0\u00a0' + fmtNum(relectureMax) + fH(' de validation et adaptation par an. Ce temps est ce qui fait votre valeur ajout\u00e9e. Il n\u2019est pas comptabilis\u00e9 comme perdu.</p>');
+        html += '<p class="info-callout" style="font-size:var(--fs-caption); color:var(--gris); line-height:1.55; margin-top:var(--space-xs); padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.05); text-align:left; padding-left:var(--space-md);"><strong style="color: var(--brand-text);">Temps de relecture int\u00e9gr\u00e9 au calcul\u00a0:</strong> Qalia produit une premi\u00e8re version structur\u00e9e. Votre relecture p\u00e9dagogique reste indispensable\u00a0: comptez ' + fmtNum(relectureMin) + '\u00a0\u00e0\u00a0' + fmtNum(relectureMax) + fH(' de validation et adaptation par an. Ce temps est ce qui fait votre valeur ajout\u00e9e. Il n\u2019est pas comptabilis\u00e9 comme perdu.</p>');
         container.innerHTML = html;
 
         // Trigger animation after insertion (stagger 150ms per group = 75ms per bar)
@@ -4408,7 +4407,7 @@
         var costLabel = document.getElementById('simBalanceCostLabel');
         var costValue = document.getElementById('simBalanceCostValue');
         var tierLabel = teamMultiplier > 1 ? ' \u00b7 Palier ' + pricingTier.name + ' (' + teamMultiplier + ' licences)' : '';
-        var surDevisNote = pricingTier.surDevis ? ' <small style="color:var(--bleu-canard);">\u2193 tarif d\u00e9gressif en d\u00e9mo</small>' : '';
+        var surDevisNote = pricingTier.surDevis ? ' <small style="color: var(--brand-text);">\u2193 tarif d\u00e9gressif en d\u00e9mo</small>' : '';
         var isAlreadySub = state.chatgptPlan === 'already';
         var chatgptSuffix = '';
         if (!isAlreadySub) {
@@ -4540,7 +4539,7 @@
             else catValue = 'Qalia est mis \u00e0 jour pour refl\u00e9ter les \u00e9volutions du r\u00e9f\u00e9rentiel. Nouveaux programmes, mises \u00e0 jour p\u00e9dagogiques, pr\u00e9paration du prochain audit\u00a0: vos documents restent \u00e0 jour dans la dur\u00e9e.';
           }
 
-          recurringEl.innerHTML = '<strong style="color:var(--bleu-canard);">Pourquoi un abonnement\u00a0?</strong><br>'
+          recurringEl.innerHTML = '<strong style="color: var(--brand-text);">Pourquoi un abonnement\u00a0?</strong><br>'
             + cycleInfo + ' ' + catValue;
           recurringEl.style.display = '';
         } else {
@@ -4560,21 +4559,21 @@
           var extraSessions = Math.round(hoursSaved / 1.5);
           reinvestHtml += '<div style="background:rgba(27,126,148,0.06); border-radius:1rem; padding:var(--space-sm); text-align:center;">';
           reinvestHtml += '<div style="font-size:1.5rem; margin-bottom:var(--space-2xs);">\ud83c\udfaf</div>';
-          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color:var(--bleu-canard); margin-bottom:var(--space-2xs);">' + reinvL.lbl1 + '</div>';
+          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color: var(--brand-text); margin-bottom:var(--space-2xs);">' + reinvL.lbl1 + '</div>';
           reinvestHtml += '<div style="font-size:var(--fs-small); color:var(--noir);">+' + fmtNum(extraSessions) + ' ' + reinvL.sub1 + '</div>';
           reinvestHtml += '</div>';
           // Option 2 : Facturation
           var extraRevenue = Math.round(hoursSaved * effectiveTjm);
           reinvestHtml += '<div style="background:rgba(27,126,148,0.06); border-radius:1rem; padding:var(--space-sm); text-align:center;">';
           reinvestHtml += '<div style="font-size:1.5rem; margin-bottom:var(--space-2xs);">\ud83d\udcb0</div>';
-          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color:var(--bleu-canard); margin-bottom:var(--space-2xs);">' + reinvL.lbl2 + '</div>';
+          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color: var(--brand-text); margin-bottom:var(--space-2xs);">' + reinvL.lbl2 + '</div>';
           reinvestHtml += '<div style="font-size:var(--fs-small); color:var(--noir);">+' + fmtNum(extraRevenue) + '\u00a0\u20ac ' + reinvL.sub2 + '</div>';
           reinvestHtml += '</div>';
           // Option 3 : Vie personnelle
           var weekendsBack = Math.round((hoursSaved / (teamMultiplier || 1)) / 16);
           reinvestHtml += '<div style="background:rgba(27,126,148,0.06); border-radius:1rem; padding:var(--space-sm); text-align:center;">';
           reinvestHtml += '<div style="font-size:1.5rem; margin-bottom:var(--space-2xs);">\u2600\ufe0f</div>';
-          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color:var(--bleu-canard); margin-bottom:var(--space-2xs);">' + reinvL.lbl3 + '</div>';
+          reinvestHtml += '<div style="font-size:var(--fs-small); font-weight:700; color: var(--brand-text); margin-bottom:var(--space-2xs);">' + reinvL.lbl3 + '</div>';
           var _sub3 = (teamMultiplier > 1) ? 'week\u2011ends r\u00e9cup\u00e9r\u00e9s par an par collaborateur' : reinvL.sub3;
           reinvestHtml += '<div style="font-size:var(--fs-small); color:var(--noir);">' + fmtNum(weekendsBack) + ' ' + _sub3 + '</div>';
           reinvestHtml += '</div>';
@@ -4737,7 +4736,7 @@
           var surLabel = surchargeCount === 0 ? 'Aucun' : (surchargeCount <= 2 ? 'G\u00e9rable' : (surchargeCount <= 4 ? '\u00c0 anticiper' : 'Tension forte'));
           // Rendu : 3 tuiles
           var tileStyle = 'padding:var(--space-sm) var(--space-xs); background:rgba(27,126,148,0.04); border-radius:0.5rem;';
-          var valStyle = 'font-size:var(--fs-lead); font-weight:700; color:var(--bleu-canard); line-height:1.2; display:block;';
+          var valStyle = 'font-size:var(--fs-lead); font-weight:700; color: var(--brand-text); line-height:1.2; display:block;';
           var lblStyle = 'font-size:0.75rem; color:var(--gris); text-transform:uppercase; letter-spacing:0.03em; display:block; margin-bottom:0.25rem;';
           var subStyle = 'font-size:0.75rem; color:var(--gris); display:block; margin-top:0.25rem;';
           var picMoisNom = picIdx >= 0 ? soutMoisNoms[picIdx] : '\u2014';
@@ -4780,7 +4779,7 @@
             else if (seasonCible === 'accompagnateurVAE') seasonAction = 'structurer vos prochains parcours VAE en avance, c\u2019est du temps gagn\u00e9 sur la reprise.';
             else if (seasonCible === 'directeurCFA' || seasonCible === 'maitreApprentissage') seasonAction = 'pr\u00e9parer vos prochains programmes d\u2019alternance en avance, c\u2019est du temps gagn\u00e9 \u00e0 la rentr\u00e9e.';
             else if (seasonCible === 'directeurOF' || seasonCible === 'qualite') seasonAction = 'structurer vos prochains dispositifs en avance, c\u2019est du temps gagn\u00e9 \u00e0 la rentr\u00e9e.';
-            seasonNote.innerHTML = 'Les mois \u00e0 activit\u00e9 r\u00e9duite sont votre <strong style="color:var(--bleu-canard); font-style:normal;">fen\u00eatre pour anticiper</strong>\u00a0:<br>' + seasonAction;
+            seasonNote.innerHTML = 'Les mois \u00e0 activit\u00e9 r\u00e9duite sont votre <strong style="color: var(--brand-text); font-style:normal;">fen\u00eatre pour anticiper</strong>\u00a0:<br>' + seasonAction;
             seasonNote.style.display = 'block';
           } else {
             // ROI négatif : Insight + Consequences + Advice couvrent déjà les leviers. Pas de note redondante.
@@ -4941,7 +4940,7 @@
           ctaDiv.innerHTML = '<a href="https://rdv.qalia.ai" class="btn btn-primary" target="_blank" rel="nofollow noopener">Je r\u00e9serve ma d\u00e9mo offerte</a>'
             + '<p style="font-size:var(--fs-small); color:var(--gris); margin-top:var(--space-xs);">45\u00a0<span class="u">min</span> \u00b7 Sans engagement \u00b7 R\u00e9sultats concrets \u00b7 ' + ctaLabel + '</p>';
         } else {
-          ctaDiv.innerHTML = '<a href="https://rdv.qalia.ai" class="btn btn-primary" style="background:var(--bordeaux); border-color:var(--bordeaux);" target="_blank" rel="nofollow noopener">Testez sur votre cas r\u00e9el</a>'
+          ctaDiv.innerHTML = '<a href="https://rdv.qalia.ai" class="btn btn-primary" style="background:var(--bordeaux); border-color: var(--brand-accent-text);" target="_blank" rel="nofollow noopener">Testez sur votre cas r\u00e9el</a>'
             + '<p style="font-size:var(--fs-small); color:var(--gris); margin-top:var(--space-xs);">'
             + 'Qalia n\u2019est pas pour tout le monde, et c\u2019est normal. Mais une d\u00e9mo offerte ne co\u00fbte rien.</p>';
         }
@@ -5101,25 +5100,25 @@
             ? '<strong>' + empPart.substring(0, empPartIdx + 2) + '</strong>' + empPart.substring(empPartIdx + 2)
             : '<strong>' + empPart + '</strong>';
           empreinteWrap.innerHTML = '<div class="info-callout" style="margin-top:var(--space-sm); padding:var(--space-md) var(--space-md) var(--space-md) calc(var(--space-md) + 3px); background-color:rgba(27,126,148,0.06);">'
-            + '<p style="font-size:var(--fs-small); color:var(--noir); margin:0 0 var(--space-xs) 0; line-height:1.6;"><strong style="color:var(--bleu-canard);">Empreinte m\u00e9tier : un dossier qui vous ressemble</strong></p>'
+            + '<p style="font-size:var(--fs-small); color:var(--noir); margin:0 0 var(--space-xs) 0; line-height:1.6;"><strong style="color: var(--brand-text);">Empreinte m\u00e9tier : un dossier qui vous ressemble</strong></p>'
             + '<p style="font-size:var(--fs-small); color:var(--noir); margin:0 0 var(--space-sm) 0; line-height:1.6;">Un auditeur doit pouvoir deviner, en lisant votre dossier, de quel organisme il s\u2019agit. Qalia injecte \u00e0 chaque g\u00e9n\u00e9ration vos donn\u00e9es sp\u00e9cifiques pour \u00e9viter l\u2019effet gabarit\u00a0:</p>'
             + '<div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-sm); margin-bottom:var(--space-sm);">'
-            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(173,47,72,0.05); border-radius:6px; border:1px solid rgba(173,47,72,0.2);">'
-            + '<p style="font-size:var(--fs-caption); font-weight:600; color:var(--bordeaux); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">Sortie g\u00e9n\u00e9rique (ChatGPT brut)</p>'
-            + '<p style="font-size:var(--fs-caption); color:var(--bordeaux); margin:0; line-height:1.5; font-style:italic;">' + empD.generic + '</p>'
+            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(173,47,72,0.05); border-radius: 0.5rem; border:1px solid rgba(173,47,72,0.2);">'
+            + '<p style="font-size:var(--fs-caption); font-weight:600; color: var(--brand-accent-text); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">Sortie g\u00e9n\u00e9rique (ChatGPT brut)</p>'
+            + '<p style="font-size:var(--fs-caption); color: var(--brand-accent-text); margin:0; line-height:1.5; font-style:italic;">' + empD.generic + '</p>'
             + '</div>'
-            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius:6px; border:1px solid rgba(27,126,148,0.25);">'
-            + '<p style="font-size:var(--fs-caption); font-weight:600; color:var(--bleu-canard); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.qaliaLabel + '</p>'
+            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius: 0.5rem; border:1px solid rgba(27,126,148,0.25);">'
+            + '<p style="font-size:var(--fs-caption); font-weight:600; color: var(--brand-text); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.qaliaLabel + '</p>'
             + '<p style="font-size:var(--fs-caption); color:var(--noir); margin:0; line-height:1.5; font-style:italic;">' + empD.qaliaEx + '</p>'
             + '</div>'
             + '</div>'
             + '<div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-sm); margin-bottom:var(--space-sm);">'
-            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius:6px; border:1px solid rgba(27,126,148,0.25);">'
-            + '<p style="font-size:var(--fs-caption); font-weight:600; color:var(--bleu-canard); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.var1Label + '</p>'
+            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius: 0.5rem; border:1px solid rgba(27,126,148,0.25);">'
+            + '<p style="font-size:var(--fs-caption); font-weight:600; color: var(--brand-text); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.var1Label + '</p>'
             + '<p style="font-size:var(--fs-caption); color:var(--noir); margin:0; line-height:1.5; font-style:italic;">' + empD.var1Ex + '</p>'
             + '</div>'
-            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius:6px; border:1px solid rgba(27,126,148,0.25);">'
-            + '<p style="font-size:var(--fs-caption); font-weight:600; color:var(--bleu-canard); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.var2Label + '</p>'
+            + '<div style="padding:var(--space-xs) var(--space-sm); background:rgba(27,126,148,0.08); border-radius: 0.5rem; border:1px solid rgba(27,126,148,0.25);">'
+            + '<p style="font-size:var(--fs-caption); font-weight:600; color: var(--brand-text); margin:0 0 var(--space-2xs) 0; text-transform:uppercase; letter-spacing:0.03em;">' + empD.var2Label + '</p>'
             + '<p style="font-size:var(--fs-caption); color:var(--noir); margin:0; line-height:1.5; font-style:italic;">' + empD.var2Ex + '</p>'
             + '</div>'
             + '</div>'
@@ -5225,12 +5224,12 @@
         return '<!DOCTYPE html><html><head><meta charset="utf-8"></head><body style="margin:0;padding:0;background:#f5f3ef;font-family:Arial,Helvetica,sans-serif;">'
           + '<table width="100%" cellpadding="0" cellspacing="0" style="background:#f5f3ef;padding:20px 0;">'
           + '<tr><td align="center">'
-          + '<table width="600" cellpadding="0" cellspacing="0" style="background:#fff;border-radius:1rem;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">'
+          + '<table width="600" cellpadding="0" cellspacing="0" style="background:var(--blanc);border-radius:1rem;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);">'
 
           // Header with logo
           + '<tr><td style="background:#1B7E94;padding:28px 32px;text-align:center;">'
           + '<img src="https://www.qalia.ai/Qalia.png" alt="Qalia" width="140" height="auto" style="display:inline-block;max-width:140px;height:auto;margin-bottom:8px;" />'
-          + '<p style="margin:6px 0 0;color:rgba(255,255,255,1);font-size:13px;">Assistant IA \u00b7 Ing\u00e9nierie p\u00e9dagogique structur\u00e9e selon le RNQ V9</p>'
+          + '<p style="margin:6px 0 0;color:color-mix(in srgb, var(--blanc) 100%, transparent);font-size:13px;">Assistant IA \u00b7 Ing\u00e9nierie p\u00e9dagogique structur\u00e9e selon le RNQ V9</p>'
           + '</td></tr>'
 
           // Intro
@@ -5243,29 +5242,29 @@
           + '<tr><td style="padding:12px 32px 20px;">'
           + '<table width="100%" cellpadding="0" cellspacing="0">'
           + '<tr>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius:10px;padding:16px 12px;text-align:center;">'
-          + '<div style="font-size:24px;font-weight:700;color:#1B7E94;">' + fmtNum(hours) + fH('</div>')
+          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
+          + '<div style="font-size:24px;font-weight:700;color: var(--brand-text);">' + fmtNum(hours) + fH('</div>')
           + '<div style="font-size:11px;color:#666;margin-top:4px;">Heures lib\u00e9r\u00e9es/an</div>'
           + '</div></td>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius:10px;padding:16px 12px;text-align:center;">'
-          + '<div style="font-size:24px;font-weight:700;color:#1B7E94;">' + fmtNum(value) + '\u00a0<sup class="u">\u20ac</sup></div>'
+          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
+          + '<div style="font-size:24px;font-weight:700;color: var(--brand-text);">' + fmtNum(value) + '\u00a0<sup class="u">\u20ac</sup></div>'
           + '<div style="font-size:11px;color:#666;margin-top:4px;">Valeur r\u00e9cup\u00e9r\u00e9e</div>'
           + '</div></td>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius:10px;padding:16px 12px;text-align:center;">'
-          + '<div style="font-size:24px;font-weight:700;color:#1B7E94;">\u00d7' + fmtNum(roi, 1) + '</div>'
+          + '<td width="33%" style="padding:8px;"><div style="background:#f0f7f7;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
+          + '<div style="font-size:24px;font-weight:700;color: var(--brand-text);">\u00d7' + fmtNum(roi, 1) + '</div>'
           + '<div style="font-size:11px;color:#666;margin-top:4px;">ROI annuel (jusqu\u2019\u00e0)</div>'
           + '</div></td>'
           + '</tr>'
           + '<tr>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius:10px;padding:16px 12px;text-align:center;">'
+          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
           + '<div style="font-size:24px;font-weight:700;color:#333;">' + fmtNum(days) + '</div>'
           + '<div style="font-size:11px;color:#666;margin-top:4px;">Jours lib\u00e9r\u00e9s</div>'
           + '</div></td>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius:10px;padding:16px 12px;text-align:center;">'
+          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
           + '<div style="font-size:24px;font-weight:700;color:#333;">' + (dd.paybackLabel || ('M' + dd.paybackMonth)) + '</div>'
           + '<div style="font-size:11px;color:#666;margin-top:4px;">Payback</div>'
           + '</div></td>'
-          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius:10px;padding:16px 12px;text-align:center;">'
+          + '<td width="33%" style="padding:8px;"><div style="background:#faf6f0;border-radius: 0.75rem;padding:16px 12px;text-align:center;">'
           + '<div style="font-size:24px;font-weight:700;color:' + (net >= 0 ? '#2D6E54' : '#C94040') + ';">' + sign + fmtNum(net) + '\u00a0<sup class="u">\u20ac</sup></div>'
           + '<div style="font-size:11px;color:#666;margin-top:4px;">R\u00e9sultat net</div>'
           + '</div></td>'
@@ -5275,8 +5274,8 @@
 
           // Decision analysis
           + '<tr><td style="padding:0 32px 20px;">'
-          + '<div style="background-color:#f5f3ef;border-radius:10px;padding:20px 20px 20px 24px;background-image:linear-gradient(180deg, #1B7E94, #2A9DB6);background-size:4px 100%;background-repeat:no-repeat;background-position:left;">'
-          + '<h3 style="margin:0 0 12px;font-size:14px;color:#1B7E94;text-transform:uppercase;letter-spacing:0.5px;">Analyse d\u00e9cisionnelle</h3>'
+          + '<div style="background-color:#f5f3ef;border-radius: 0.75rem;padding:20px 20px 20px 24px;background-image:linear-gradient(180deg, #1B7E94, #2A9DB6);background-size:4px 100%;background-repeat:no-repeat;background-position:left;">'
+          + '<h3 style="margin:0 0 12px;font-size:14px;color: var(--brand-text);text-transform:uppercase;letter-spacing:0.5px;">Analyse d\u00e9cisionnelle</h3>'
           + '<table width="100%" cellpadding="0" cellspacing="0" style="font-size:14px;color:#333;">'
           + '<tr><td style="padding:6px 0;"><strong>Indicateur de priorit\u00e9</strong></td><td style="padding:6px 0;text-align:right;">' + eisTag + '</td></tr>'
           + '<tr><td colspan="2" style="border-top:1px solid #ddd;"></td></tr>'
@@ -5300,7 +5299,7 @@
           // CTA
           + '<tr><td style="padding:0 32px 28px;text-align:center;">'
           + '<a href="https://rdv.qalia.ai" target="_blank" rel="nofollow noopener" style="display:inline-block;background:#1B7E94;color:#fff;text-decoration:none;padding:14px 32px;border-radius:0.75rem;font-size:15px;font-weight:600;">R\u00e9servez ma d\u00e9mo offerte (30 <span class="u">min</span>)</a>'
-          + '<br><a href="https://www.qalia.ai" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:13px;color:#1B7E94;text-decoration:underline;">Simulez votre propre ROI</a>'
+          + '<br><a href="https://www.qalia.ai" target="_blank" rel="noopener" style="display:inline-block;margin-top:8px;font-size:13px;color: var(--brand-text);text-decoration:underline;">Simulez votre propre ROI</a>'
           + '</td></tr>'
 
           // Footer
@@ -7781,4 +7780,3 @@
       };
 
     })();
-
